@@ -1,16 +1,9 @@
-name: Deploy Documentation to GitHub Pages
+name: Deploy Test to GitHub Pages
 
 on:
   push:
-    tags:
-      - 'pti-*'                 # Build and deploy on version tags (for production)
-  pull_request:
     branches:
-      - master
-    paths:
-      - 'sdk/docs/**'
-      - 'sdk/include/**'
-      - '.github/workflows/deploy_docs.yml'
+      - main
   workflow_dispatch:
 
 permissions:
@@ -19,107 +12,55 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages-${{ github.repository }}"
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
-  detect-environment:
-    name: Detect Repository Environment
-    runs-on: ${{ vars.DIND_ARC_RUNNER_GITHUB }}
-    outputs:
-      repo_type: ${{ steps.detect.outputs.repo_type }}
-
-    steps:
-      - name: Detect repository type
-        id: detect
-        run: |
-          if [[ "${{ github.repository }}" == *"pti-gpu"* ]]; then
-            echo "repo_type=external" >> $GITHUB_OUTPUT
-            echo "Detected: External repository"
-          else
-            echo "repo_type=internal" >> $GITHUB_OUTPUT
-            echo "Detected: Internal repository"
-          fi
-          echo "Repository: ${{ github.repository }}"
-
   build:
-    name: Build Documentation
-    runs-on: ${{ vars.DIND_ARC_RUNNER_GITHUB }}
-    needs: detect-environment
-
-    container: ${{ vars.PTI_BARE_UBUNTU_24_04 }} 
-    
+    name: Build Test Page
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Clean-up
-        run: rm -rf *
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install system dependencies
+      - name: Create simple HTML page
         run: |
-          # Update package lists
-          apt-get update
-
-          # Install lsb-release (needed by setup-python action)
-          apt-get install -y lsb-release
-
-          # Install doxygen, graphviz, cmake, make, and ninja
-          apt-get install -y doxygen graphviz cmake make ninja-build
-
-      - name: Python Environment Setup
-        uses: astral-sh/setup-uv@v6
-        with:
-          python-version: '3.11'
-          activate-environment: true
-          cache-local-path: ${{ github.workspace }}/.cache/uv
-
-      - name: Install Python dependencies
-        run: |
-          uv pip install --upgrade pip
-          uv pip install -r sdk/docs/requirements.txt
-
-      - name: Build documentation
-        working-directory: sdk/docs/sphinx
-        run: |
-          make clean
-          make html
-
-      - name: Add .nojekyll file
-        run: |
-          # Prevent Jekyll processing on GitHub Pages
-          touch sdk/docs/sphinx/build/html/.nojekyll
+          mkdir -p public
+          cat > public/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Hello GitHub Pages</title>
+          </head>
+          <body>
+              <h1>Hello World!</h1>
+              <p>This is a test deployment to GitHub Pages.</p>
+              <p>Deployed from: ${{ github.repository }}</p>
+              <p>Commit: ${{ github.sha }}</p>
+          </body>
+          </html>
+          EOF
+          touch public/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: sdk/docs/sphinx/build/html
+          path: public
 
   deploy:
     name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    # note: these only available to the inner repo, need to add them to the external repo's variables
-    runs-on: ${{ vars.DIND_ARC_RUNNER_GITHUB }}
-    container: ${{ vars.PTI_BARE_UBUNTU_24_04 }}
-    
-    needs: [detect-environment, build]
-
-    # uncomment this line to enable deployment only on tags (for production)
-    # if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/pti-')
 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Deployment Summary
-        run: |
-          echo "Documentation deployed successfully"
-          echo "Repository: ${{ github.repository }}"
-          echo "Repository Type: ${{ needs.detect-environment.outputs.repo_type }}"
-          echo "Tag: ${{ github.ref_name }}"
-          echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
+      - name: Show deployment URL
+        run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
