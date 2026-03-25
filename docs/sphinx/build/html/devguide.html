@@ -1,0 +1,1287 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Developer’s Guide &#8212; PTI  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9df5baf6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'devguide';</script>
+    <link rel="icon" href="_static/favicons.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hardware Metrics Collection" href="metrics_guide.html" />
+    <link rel="prev" title="Code Samples and Examples" href="samples.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">PTI Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What’s New</a></li>
+<li class="toctree-l1"><a class="reference internal" href="systemreqs.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="knownissues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">Code Samples and Examples</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Developer’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_guide.html">Hardware Metrics Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication_tracing.html">Communication Tracing (oneCCL/ITT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="callback_api.html">PTI Callback API (Experimental)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linking.html">Linking</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="view_api_ref.html">PTI View API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_api_ref.html">PTI Metrics API Reference</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/intel/pti-gpu/edit/master/docs/sphinx/source/devguide.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/intel/pti-gpu/issues/new?title=Issue%20on%20page%20%2Fdevguide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/devguide.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Developer’s Guide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts">Core Concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-types">View Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#callbacks">Callbacks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-collection">Local Collection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-workflow">Basic Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-example">Minimal Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-usage-patterns">API Usage Patterns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-callbacks">Setting Up Callbacks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-and-disabling-views">Enabling and Disabling Views</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-records-in-callbacks">Processing Records in Callbacks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-correlation-ids">External Correlation IDs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#threading-considerations">Threading Considerations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thread-safety">Thread Safety</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-invocation">Callback Invocation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-threaded-applications">Multi-Threaded Applications</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-overhead">Performance Overhead</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-overhead">Understanding Overhead</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimizing-overhead">Minimizing Overhead</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-local-collection-support">Checking Local Collection Support</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">Advanced Topics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-timestamps">Custom Timestamps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flushing-views">Flushing Views</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-current-timestamp">Getting Current Timestamp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fine-grained-api-filtering">Fine-Grained API Filtering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-id-headers">API ID Headers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linking-pti-in-your-application">Linking PTI in Your Application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="developer-s-guide">
+<h1>Developer’s Guide<a class="headerlink" href="#developer-s-guide" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DRAFT DOCUMENTATION</strong> - This documentation is currently in draft status and subject to change.</p>
+</div>
+<p>This guide explains how to use the PTI SDK API to build profiling tools for GPU applications. It covers the core concepts, API workflow, and best practices for integrating PTI into your applications.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The PTI SDK provides a high-level C API for tracing GPU activities in SYCL and Level-Zero applications. The API abstracts low-level runtime details and provides a consistent interface for collecting profiling data.</p>
+</section>
+<section id="core-concepts">
+<h2>Core Concepts<a class="headerlink" href="#core-concepts" title="Link to this heading">#</a></h2>
+<section id="view-types">
+<h3>View Types<a class="headerlink" href="#view-types" title="Link to this heading">#</a></h3>
+<p>PTI organizes tracing capabilities into <strong>views</strong>. Each view represents a category of GPU activity:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DEVICE_GPU_KERNEL</span></code></dt><dd><p>Traces GPU kernel execution. Provides kernel name, execution times, and device information.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DEVICE_GPU_MEM_COPY</span></code></dt><dd><p>Traces memory copy operations between host and device. Includes transfer size, direction, and timing.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DEVICE_GPU_MEM_FILL</span></code></dt><dd><p>Traces memory fill operations. Provides pattern, size, and timing information.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DEVICE_GPU_MEM_COPY_P2P</span></code></dt><dd><p>Traces peer-to-peer memory copy operations between GPU devices. Includes source/destination device information, transfer size, and timing.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DEVICE_SYNCHRONIZATION</span></code></dt><dd><p>Traces synchronization operations including barriers, fences, and event waits. Captures both GPU barrier operations and host synchronization API calls with timing information.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DRIVER_API</span></code></dt><dd><p>Traces low-level driver API calls (Level-Zero, OpenCL). Shows driver function names, parameters, and execution times. Useful for understanding runtime behavior and overhead.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_RUNTIME_API</span></code></dt><dd><p>Traces runtime API calls (SYCL). Shows API function names, parameters, and execution times.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_COLLECTION_OVERHEAD</span></code></dt><dd><p>Traces PTI’s own collection overhead. Measures the performance impact of profiling itself, helping you understand and minimize instrumentation costs.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">PTI_VIEW_EXTERNAL_CORRELATION</span></code></dt><dd><p>Enables application-level correlation. Associates application events with GPU activities.</p>
+</dd>
+</dl>
+<p>You enable views independently based on your profiling needs. Multiple views can be active simultaneously.</p>
+</section>
+<section id="callbacks">
+<h3>Callbacks<a class="headerlink" href="#callbacks" title="Link to this heading">#</a></h3>
+<p>PTI uses <strong>callbacks</strong> to deliver profiling data to your application. When a traced event completes, PTI invokes the corresponding callback with event details.</p>
+<p>Available callbacks:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">buffer_requested</span></code> - Called when PTI needs a buffer for storing records</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">buffer_completed</span></code> - Called when a buffer is full and ready for processing</p></li>
+</ul>
+<p>Each view type has associated record structures passed to callbacks:</p>
+<ul class="simple">
+<li><p>Kernel view → <code class="docutils literal notranslate"><span class="pre">pti_view_record_kernel</span></code></p></li>
+<li><p>Memory copy → <code class="docutils literal notranslate"><span class="pre">pti_view_record_memory_copy</span></code></p></li>
+<li><p>Memory fill → <code class="docutils literal notranslate"><span class="pre">pti_view_record_memory_fill</span></code></p></li>
+<li><p>P2P memory copy → <code class="docutils literal notranslate"><span class="pre">pti_view_record_memory_copy_p2p</span></code></p></li>
+<li><p>Synchronization → <code class="docutils literal notranslate"><span class="pre">pti_view_record_synchronization</span></code></p></li>
+<li><p>API calls → <code class="docutils literal notranslate"><span class="pre">pti_view_record_api</span></code></p></li>
+<li><p>Collection overhead → <code class="docutils literal notranslate"><span class="pre">pti_view_record_overhead</span></code></p></li>
+<li><p>External correlation → <code class="docutils literal notranslate"><span class="pre">pti_view_record_external_correlation</span></code></p></li>
+<li><p>Communication (oneCCL) → <code class="docutils literal notranslate"><span class="pre">pti_view_record_comms</span></code></p></li>
+</ul>
+</section>
+<section id="local-collection">
+<h3>Local Collection<a class="headerlink" href="#local-collection" title="Link to this heading">#</a></h3>
+<p><strong>Local collection</strong> enables zero-overhead profiling by starting and stopping tracing on demand:</p>
+<ul class="simple">
+<li><p>Outside <code class="docutils literal notranslate"><span class="pre">ptiViewEnable()</span></code>/<code class="docutils literal notranslate"><span class="pre">ptiViewDisable()</span></code> regions: <strong>zero overhead</strong></p></li>
+<li><p>Inside enabled regions: full tracing with minimal overhead</p></li>
+</ul>
+<p>On systems with Level-Zero 1.9.0+, overhead is truly zero outside enabled regions. On older systems, some overhead remains but data collection occurs only within enabled regions.</p>
+</section>
+</section>
+<section id="basic-workflow">
+<h2>Basic Workflow<a class="headerlink" href="#basic-workflow" title="Link to this heading">#</a></h2>
+<p>The typical PTI SDK usage follows this pattern:</p>
+<ol class="arabic simple">
+<li><p><strong>Define callback functions</strong> to process profiling data</p></li>
+<li><p><strong>Register callbacks</strong> with <code class="docutils literal notranslate"><span class="pre">ptiViewSetCallbacks()</span></code></p></li>
+<li><p><strong>Enable views</strong> with <code class="docutils literal notranslate"><span class="pre">ptiViewEnable()</span></code></p></li>
+<li><p><strong>Run your application</strong> - GPU activities are traced</p></li>
+<li><p><strong>Disable views</strong> with <code class="docutils literal notranslate"><span class="pre">ptiViewDisable()</span></code></p></li>
+<li><p><strong>Process collected data</strong> in callbacks</p></li>
+</ol>
+<section id="minimal-example">
+<h3>Minimal Example<a class="headerlink" href="#minimal-example" title="Link to this heading">#</a></h3>
+<p>Here’s a complete minimal example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_view.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="c1">// Global storage for collected data</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pti_view_record_kernel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">kernel_records</span><span class="p">;</span>
+
+<span class="c1">// Buffer management callbacks</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">BufferRequested</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="o">*</span><span class="w"> </span><span class="n">buf_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="n">buf_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1 MB buffer</span>
+<span class="w">    </span><span class="o">*</span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="p">[</span><span class="o">*</span><span class="n">buf_size</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">BufferCompleted</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span>
+<span class="w">                     </span><span class="kt">size_t</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Process records in buffer</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">buf</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">valid_buf_size</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">pti_view_record_base</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">                     </span><span class="n">buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">_view_kind</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">kernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_kernel</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+<span class="w">            </span><span class="n">kernel_records</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">*</span><span class="n">kernel</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Kernel: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">kernel</span><span class="o">-&gt;</span><span class="n">name</span>
+<span class="w">                     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, Duration: &quot;</span>
+<span class="w">                     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">kernel</span><span class="o">-&gt;</span><span class="n">end_timestamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">kernel</span><span class="o">-&gt;</span><span class="n">start_timestamp</span><span class="p">)</span>
+<span class="w">                     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; ns&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">_view_record_size</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">buf</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 1. Set up callbacks</span>
+<span class="w">    </span><span class="n">pti_result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptiViewSetCallbacks</span><span class="p">(</span><span class="n">BufferRequested</span><span class="p">,</span><span class="w"> </span><span class="n">BufferCompleted</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">PTI_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to set callbacks&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 2. Enable tracing</span>
+<span class="w">    </span><span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 3. Run your GPU application</span>
+<span class="w">    </span><span class="c1">// ... your SYCL/Level-Zero code here ...</span>
+
+<span class="w">    </span><span class="c1">// 4. Disable tracing</span>
+<span class="w">    </span><span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 5. Print summary</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Total kernels traced: &quot;</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">kernel_records</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="api-usage-patterns">
+<h2>API Usage Patterns<a class="headerlink" href="#api-usage-patterns" title="Link to this heading">#</a></h2>
+<section id="setting-up-callbacks">
+<h3>Setting Up Callbacks<a class="headerlink" href="#setting-up-callbacks" title="Link to this heading">#</a></h3>
+<p>Callbacks must be registered <strong>before</strong> enabling any views:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set callbacks before enabling views</span>
+<span class="n">ptiViewSetCallbacks</span><span class="p">(</span><span class="n">MyBufferRequested</span><span class="p">,</span><span class="w"> </span><span class="n">MyBufferCompleted</span><span class="p">);</span>
+
+<span class="c1">// Now safe to enable views</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Callback functions should be thread-safe if your application uses multiple threads.</p>
+</section>
+<section id="enabling-and-disabling-views">
+<h3>Enabling and Disabling Views<a class="headerlink" href="#enabling-and-disabling-views" title="Link to this heading">#</a></h3>
+<p>Views are enabled and disabled independently:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable multiple views</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_MEM_COPY</span><span class="p">);</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_RUNTIME_API</span><span class="p">);</span>
+
+<span class="c1">// Run traced code</span>
+<span class="n">RunMyApplication</span><span class="p">();</span>
+
+<span class="c1">// Disable in reverse order (recommended)</span>
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_RUNTIME_API</span><span class="p">);</span>
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_MEM_COPY</span><span class="p">);</span>
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Nested Enable/Disable:</strong></p>
+<p>PTI tracks enable/disable calls per view. Views remain enabled until all corresponding <code class="docutils literal notranslate"><span class="pre">ptiViewDisable()</span></code> calls complete:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span><span class="w">  </span><span class="c1">// Enable count: 1</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span><span class="w">  </span><span class="c1">// Enable count: 2</span>
+
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span><span class="w"> </span><span class="c1">// Enable count: 1 (still enabled)</span>
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span><span class="w"> </span><span class="c1">// Enable count: 0 (now disabled)</span>
+</pre></div>
+</div>
+</section>
+<section id="processing-records-in-callbacks">
+<h3>Processing Records in Callbacks<a class="headerlink" href="#processing-records-in-callbacks" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">buffer_completed</span></code> callback receives a buffer containing multiple records. Iterate through records carefully:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">BufferCompleted</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span>
+<span class="w">                     </span><span class="kt">size_t</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">buf</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">valid_buf_size</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">pti_view_record_base</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">                     </span><span class="n">buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Check view kind</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">_view_kind</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">kernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_kernel</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+<span class="w">                </span><span class="n">ProcessKernel</span><span class="p">(</span><span class="n">kernel</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_VIEW_DEVICE_GPU_MEM_COPY</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">memcpy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_memory_copy</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+<span class="w">                </span><span class="n">ProcessMemCopy</span><span class="p">(</span><span class="n">memcpy</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">// Handle other view kinds...</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Advance to next record</span>
+<span class="w">        </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">_view_record_size</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">buf</span><span class="p">;</span><span class="w">  </span><span class="c1">// Free buffer when done</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Always check <code class="docutils literal notranslate"><span class="pre">_view_kind</span></code> before casting to specific record types.</p>
+</section>
+<section id="external-correlation-ids">
+<h3>External Correlation IDs<a class="headerlink" href="#external-correlation-ids" title="Link to this heading">#</a></h3>
+<p><strong>External correlation IDs</strong> associate application-level operations with GPU activities:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable external correlation view</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_EXTERNAL_CORRELATION</span><span class="p">);</span>
+
+<span class="c1">// Push correlation ID before operation</span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">my_operation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
+<span class="n">ptiViewPushExternalCorrelationId</span><span class="p">(</span>
+<span class="w">    </span><span class="n">PTI_VIEW_EXTERNAL_LEVEL_0</span><span class="p">,</span><span class="w"> </span><span class="n">my_operation_id</span><span class="p">);</span>
+
+<span class="c1">// Perform GPU work</span>
+<span class="n">MyGPUOperation</span><span class="p">();</span>
+
+<span class="c1">// Pop correlation ID after operation</span>
+<span class="n">ptiViewPopExternalCorrelationId</span><span class="p">(</span>
+<span class="w">    </span><span class="n">PTI_VIEW_EXTERNAL_LEVEL_0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">my_operation_id</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>GPU records created between push/pop will have the <code class="docutils literal notranslate"><span class="pre">external_id</span></code> field set to <code class="docutils literal notranslate"><span class="pre">my_operation_id</span></code>.</p>
+<p>Use cases:</p>
+<ul class="simple">
+<li><p>Correlating GPU kernels with application functions</p></li>
+<li><p>Tracking request IDs through the system</p></li>
+<li><p>Associating performance data with user operations</p></li>
+</ul>
+</section>
+</section>
+<section id="threading-considerations">
+<h2>Threading Considerations<a class="headerlink" href="#threading-considerations" title="Link to this heading">#</a></h2>
+<section id="thread-safety">
+<h3>Thread Safety<a class="headerlink" href="#thread-safety" title="Link to this heading">#</a></h3>
+<p>The PTI API is thread-safe. Multiple threads can enable/disable views and perform GPU operations concurrently.</p>
+</section>
+<section id="callback-invocation">
+<h3>Callback Invocation<a class="headerlink" href="#callback-invocation" title="Link to this heading">#</a></h3>
+<p>Callbacks may be invoked from <strong>any thread</strong>, not necessarily the thread that enabled tracing. Ensure callback implementations are thread-safe:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="w"> </span><span class="n">data_mutex</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pti_view_record_kernel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shared_data</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ThreadSafeCallback</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span>
+<span class="w">                        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Process buffer...</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lock</span><span class="p">(</span><span class="n">data_mutex</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Update shared data safely</span>
+<span class="w">    </span><span class="n">shared_data</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">record</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="multi-threaded-applications">
+<h3>Multi-Threaded Applications<a class="headerlink" href="#multi-threaded-applications" title="Link to this heading">#</a></h3>
+<p>PTI handles multi-threaded applications transparently. Each thread’s GPU submissions are traced:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+
+<span class="c1">// Launch multiple threads performing GPU work</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="o">&gt;</span><span class="w"> </span><span class="n">threads</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">threads</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">([]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Each thread submits GPU work</span>
+<span class="w">        </span><span class="n">sycl</span><span class="o">::</span><span class="n">queue</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="cm">/* kernel */</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">threads</span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
+
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>All kernel submissions from all threads are traced.</p>
+</section>
+</section>
+<section id="performance-overhead">
+<h2>Performance Overhead<a class="headerlink" href="#performance-overhead" title="Link to this heading">#</a></h2>
+<section id="understanding-overhead">
+<h3>Understanding Overhead<a class="headerlink" href="#understanding-overhead" title="Link to this heading">#</a></h3>
+<p>PTI SDK introduces minimal overhead:</p>
+<ul class="simple">
+<li><p><strong>With Local Collection (Level-Zero 1.9.0+):</strong> Zero overhead outside enabled regions</p></li>
+<li><p><strong>Without Local Collection:</strong> Small overhead throughout application lifetime</p></li>
+<li><p><strong>Inside enabled regions:</strong> 5-15% overhead depending on kernel launch frequency</p></li>
+</ul>
+</section>
+<section id="minimizing-overhead">
+<h3>Minimizing Overhead<a class="headerlink" href="#minimizing-overhead" title="Link to this heading">#</a></h3>
+<p><strong>1. Use Local Collection:</strong></p>
+<p>Only enable tracing for regions of interest:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// No overhead here</span>
+<span class="n">Initialization</span><span class="p">();</span>
+
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+<span class="n">CriticalSection</span><span class="p">();</span><span class="w">  </span><span class="c1">// Trace this</span>
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+
+<span class="c1">// No overhead here</span>
+<span class="n">Cleanup</span><span class="p">();</span>
+</pre></div>
+</div>
+<p><strong>2. Selective View Enabling:</strong></p>
+<p>Enable only necessary views:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instead of enabling everything:</span>
+<span class="c1">// ptiViewEnable(PTI_VIEW_DEVICE_GPU_KERNEL);</span>
+<span class="c1">// ptiViewEnable(PTI_VIEW_DEVICE_GPU_MEM_COPY);</span>
+<span class="c1">// ptiViewEnable(PTI_VIEW_RUNTIME_API);</span>
+
+<span class="c1">// Enable only what you need:</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span><span class="w">  </span><span class="c1">// Just kernels</span>
+</pre></div>
+</div>
+<p><strong>3. Efficient Callback Implementation:</strong></p>
+<p>Keep callbacks fast and defer expensive processing:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="n">RecordBuffer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">processing_queue</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="w"> </span><span class="n">queue_mutex</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">BufferCompleted</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span>
+<span class="w">                     </span><span class="kt">size_t</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Quick: just queue the buffer</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lock</span><span class="p">(</span><span class="n">queue_mutex</span><span class="p">);</span>
+<span class="w">    </span><span class="n">processing_queue</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// Process buffers in separate thread</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">ProcessingThread</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">running</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">RecordBuffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lock</span><span class="p">(</span><span class="n">queue_mutex</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">processing_queue</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">            </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processing_queue</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+<span class="w">            </span><span class="n">processing_queue</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Expensive processing here</span>
+<span class="w">        </span><span class="n">AnalyzeRecords</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>4. Buffer Sizing:</strong></p>
+<p>Use appropriately sized buffers to reduce callback frequency:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">BufferRequested</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="o">*</span><span class="w"> </span><span class="n">buf_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Larger buffers reduce callback frequency</span>
+<span class="w">    </span><span class="o">*</span><span class="n">buf_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span><span class="w">  </span><span class="c1">// 4 MB</span>
+<span class="w">    </span><span class="o">*</span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="p">[</span><span class="o">*</span><span class="n">buf_size</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="checking-local-collection-support">
+<h3>Checking Local Collection Support<a class="headerlink" href="#checking-local-collection-support" title="Link to this heading">#</a></h3>
+<p>Check if zero-overhead local collection is available:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ptiViewGPULocalAvailable</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PTI_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Local collection available - zero overhead!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Local collection not available - minimal overhead&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="advanced-topics">
+<h2>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Link to this heading">#</a></h2>
+<section id="custom-timestamps">
+<h3>Custom Timestamps<a class="headerlink" href="#custom-timestamps" title="Link to this heading">#</a></h3>
+<p>Provide your own timestamp source:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">uint64_t</span><span class="w"> </span><span class="nf">MyTimestampCallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Return custom timestamp</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">ptiViewSetTimestampCallback</span><span class="p">(</span><span class="n">MyTimestampCallback</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Useful for synchronizing PTI timestamps with other profiling tools.</p>
+</section>
+<section id="flushing-views">
+<h3>Flushing Views<a class="headerlink" href="#flushing-views" title="Link to this heading">#</a></h3>
+<p>Force PTI to flush all pending records:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ptiFlushAllViews</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Useful before critical synchronization points or when you need immediate access to recent data.</p>
+</section>
+<section id="getting-current-timestamp">
+<h3>Getting Current Timestamp<a class="headerlink" href="#getting-current-timestamp" title="Link to this heading">#</a></h3>
+<p>Get PTI’s current timestamp:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptiViewGetTimestamp</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Useful for correlating application events with PTI timestamps.</p>
+</section>
+<section id="fine-grained-api-filtering">
+<h3>Fine-Grained API Filtering<a class="headerlink" href="#fine-grained-api-filtering" title="Link to this heading">#</a></h3>
+<p>When <code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DRIVER_API</span></code> or <code class="docutils literal notranslate"><span class="pre">PTI_VIEW_RUNTIME_API</span></code> is enabled, you can selectively enable or disable specific APIs to reduce tracing overhead and focus on relevant operations.</p>
+<p><strong>API Group and Class Overview:</strong></p>
+<p>PTI organizes APIs into:</p>
+<ul class="simple">
+<li><p><strong>API Groups</strong> (<code class="docutils literal notranslate"><span class="pre">pti_api_group_id</span></code>): Level-Zero, OpenCL, SYCL</p></li>
+<li><p><strong>API Classes</strong> (<code class="docutils literal notranslate"><span class="pre">pti_api_class</span></code>): Categorizes APIs by purpose</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">PTI_API_CLASS_GPU_OPERATION_CORE</span></code> - Memory and kernel operations that submit work to GPU</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PTI_API_CLASS_HOST_OPERATION_SYNCHRONIZATION</span></code> - Host synchronization operations</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PTI_API_CLASS_ALL</span></code> - All API classes (use with caution)</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Filtering by API Class (Coarse-Grain):</strong></p>
+<p>Enable or disable entire categories of APIs:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable driver API tracing</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DRIVER_API</span><span class="p">);</span>
+
+<span class="c1">// Only trace GPU core operations (kernels, memcpy)</span>
+<span class="n">ptiViewEnableDriverApiClass</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w">  </span><span class="c1">// enable</span>
+<span class="w">                           </span><span class="n">PTI_API_CLASS_GPU_OPERATION_CORE</span><span class="p">,</span>
+<span class="w">                           </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">);</span>
+
+<span class="c1">// Disable synchronization APIs</span>
+<span class="n">ptiViewEnableDriverApiClass</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w">  </span><span class="c1">// disable</span>
+<span class="w">                           </span><span class="n">PTI_API_CLASS_HOST_OPERATION_SYNCHRONIZATION</span><span class="p">,</span>
+<span class="w">                           </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">);</span>
+
+<span class="c1">// Run workload - only GPU operations traced</span>
+<span class="n">run_kernels</span><span class="p">();</span>
+</pre></div>
+</div>
+<p><strong>Filtering by Individual API (Fine-Grain):</strong></p>
+<p>Enable or disable specific API functions:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_driver_levelzero_api_ids.h&quot;</span>
+
+<span class="c1">// Enable driver API tracing</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DRIVER_API</span><span class="p">);</span>
+
+<span class="c1">// Enable only zeCommandListAppendLaunchKernel</span>
+<span class="n">ptiViewEnableDriverApi</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w">  </span><span class="c1">// enable</span>
+<span class="w">                      </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">zeCommandListAppendLaunchKernel_id</span><span class="p">);</span>
+
+<span class="c1">// Disable zeCommandListAppendMemoryCopy</span>
+<span class="n">ptiViewEnableDriverApi</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w">  </span><span class="c1">// disable</span>
+<span class="w">                      </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">zeCommandListAppendMemoryCopy_id</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Runtime API Filtering:</strong></p>
+<p>Similarly filter SYCL runtime APIs:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_runtime_sycl_api_ids.h&quot;</span>
+
+<span class="c1">// Enable runtime API tracing</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_RUNTIME_API</span><span class="p">);</span>
+
+<span class="c1">// Only trace queue submit operations</span>
+<span class="n">ptiViewEnableRuntimeApiClass</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">PTI_API_CLASS_GPU_OPERATION_CORE</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">PTI_API_GROUP_SYCL</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Retrieving API Names:</strong></p>
+<p>Get human-readable names for API IDs found in records:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">ProcessApiRecord</span><span class="p">(</span><span class="n">pti_view_record_api</span><span class="o">*</span><span class="w"> </span><span class="n">rec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">api_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">pti_result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptiViewGetApiIdName</span><span class="p">(</span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">_api_group_id</span><span class="p">,</span>
+<span class="w">                                           </span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">_api_id</span><span class="p">,</span>
+<span class="w">                                           </span><span class="o">&amp;</span><span class="n">api_name</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PTI_SUCCESS</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">api_name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;API: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">api_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Use Cases:</strong></p>
+<ul class="simple">
+<li><p><strong>Reduce overhead</strong> - Trace only APIs of interest</p></li>
+<li><p><strong>Focus analysis</strong> - Filter out noise from synchronization calls</p></li>
+<li><p><strong>Debug specific paths</strong> - Enable only APIs in problematic code sections</p></li>
+<li><p><strong>Performance tuning</strong> - Isolate kernel launch vs memory transfer APIs</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>API filtering only affects <code class="docutils literal notranslate"><span class="pre">PTI_VIEW_DRIVER_API</span></code> and <code class="docutils literal notranslate"><span class="pre">PTI_VIEW_RUNTIME_API</span></code> views. Other views (kernels, memory operations) are unaffected.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use API filtering in combination with local collection (<code class="docutils literal notranslate"><span class="pre">ptiViewEnable/Disable</span></code>) for maximum control over profiling scope and overhead.</p>
+</div>
+</section>
+<section id="api-id-headers">
+<h3>API ID Headers<a class="headerlink" href="#api-id-headers" title="Link to this heading">#</a></h3>
+<p>PTI provides header files that define enumerations mapping API function names to their integer IDs. These IDs appear in <code class="docutils literal notranslate"><span class="pre">pti_view_record_api</span></code> records and are used with API filtering functions.</p>
+<p><strong>Available Headers:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pti/pti_driver_levelzero_api_ids.h</span></code> - Level-Zero driver API identifiers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pti/pti_runtime_sycl_api_ids.h</span></code> - SYCL runtime (Unified Runtime) API identifiers</p></li>
+</ul>
+<p><strong>Using Level-Zero API IDs:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_driver_levelzero_api_ids.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_view.h&quot;</span>
+
+<span class="c1">// Enable tracing of specific Level-Zero APIs</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DRIVER_API</span><span class="p">);</span>
+
+<span class="c1">// Filter to only trace kernel launch</span>
+<span class="n">ptiViewEnableDriverApi</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">zeCommandListAppendLaunchKernel_id</span><span class="p">);</span>
+
+<span class="c1">// Also trace memory copy</span>
+<span class="n">ptiViewEnableDriverApi</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">zeCommandListAppendMemoryCopy_id</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Using SYCL API IDs:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_runtime_sycl_api_ids.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_view.h&quot;</span>
+
+<span class="c1">// Enable tracing of specific SYCL runtime APIs</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_RUNTIME_API</span><span class="p">);</span>
+
+<span class="c1">// Filter to only trace kernel enqueue</span>
+<span class="n">ptiViewEnableRuntimeApi</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">PTI_API_GROUP_SYCL</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">urEnqueueKernelLaunch_id</span><span class="p">);</span>
+
+<span class="c1">// Also trace USM memcpy</span>
+<span class="n">ptiViewEnableRuntimeApi</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">PTI_API_GROUP_SYCL</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">urEnqueueUSMMemcpy_id</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Decoding API IDs in Records:</strong></p>
+<p>When processing <code class="docutils literal notranslate"><span class="pre">pti_view_record_api</span></code> records, use <code class="docutils literal notranslate"><span class="pre">ptiViewGetApiIdName()</span></code> to convert IDs to names:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">ProcessApiRecord</span><span class="p">(</span><span class="n">pti_view_record_api</span><span class="o">*</span><span class="w"> </span><span class="n">rec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">api_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Get human-readable API name</span>
+<span class="w">    </span><span class="n">ptiViewGetApiIdName</span><span class="p">(</span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">_api_group_id</span><span class="p">,</span><span class="w"> </span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">_api_id</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">api_name</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">api_name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;API: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">api_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Or manually check against enum values</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">_api_group_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">_api_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">zeCommandListAppendLaunchKernel_id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Found kernel launch API&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rec</span><span class="o">-&gt;</span><span class="n">_api_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">zeCommandListAppendMemoryCopy_id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Found memory copy API&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Enum Naming Convention:</strong></p>
+<ul class="simple">
+<li><p>Level-Zero: <code class="docutils literal notranslate"><span class="pre">ze&lt;FunctionName&gt;_id</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">zeCommandListCreate_id</span></code>)</p></li>
+<li><p>SYCL/UR: <code class="docutils literal notranslate"><span class="pre">ur&lt;FunctionName&gt;_id</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">urEnqueueKernelLaunch_id</span></code>)</p></li>
+</ul>
+<p><strong>Auto-Generated Headers:</strong></p>
+<p>These headers are automatically generated from API specifications:</p>
+<ul class="simple">
+<li><p>Level-Zero from <code class="docutils literal notranslate"><span class="pre">ze_api.h</span></code> (v1.28.0)</p></li>
+<li><p>SYCL/UR from <code class="docutils literal notranslate"><span class="pre">ur_api.h</span></code> (v0.12-r0)</p></li>
+</ul>
+<p>Do not modify these files manually. They are regenerated when PTI updates to newer API versions.</p>
+<p><strong>Complete Example:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_view.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_driver_levelzero_api_ids.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">BufferCompleted</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span>
+<span class="w">                    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Process API records</span>
+<span class="w">    </span><span class="n">pti_view_record_base</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">                     </span><span class="n">buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valid_buf_size</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">_view_kind</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PTI_VIEW_DRIVER_API</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">api_rec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_api</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Decode API name</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ptiViewGetApiIdName</span><span class="p">(</span><span class="n">api_rec</span><span class="o">-&gt;</span><span class="n">_api_group_id</span><span class="p">,</span>
+<span class="w">                               </span><span class="n">api_rec</span><span class="o">-&gt;</span><span class="n">_api_id</span><span class="p">,</span>
+<span class="w">                               </span><span class="o">&amp;</span><span class="n">name</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Driver API: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;unknown&quot;</span><span class="p">)</span>
+<span class="w">                      </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, Duration: &quot;</span>
+<span class="w">                      </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">api_rec</span><span class="o">-&gt;</span><span class="n">_end_timestamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">api_rec</span><span class="o">-&gt;</span><span class="n">_start_timestamp</span><span class="p">)</span>
+<span class="w">                      </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; ns&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_view_record_base</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">_view_record_size</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">buf</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Set up tracing</span>
+<span class="w">    </span><span class="n">ptiViewSetCallbacks</span><span class="p">(</span><span class="n">BufferRequested</span><span class="p">,</span><span class="w"> </span><span class="n">BufferCompleted</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Enable only kernel launch API tracing</span>
+<span class="w">    </span><span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DRIVER_API</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ptiViewEnableDriverApi</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">PTI_API_GROUP_LEVELZERO</span><span class="p">,</span>
+<span class="w">                          </span><span class="n">zeCommandListAppendLaunchKernel_id</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Run workload</span>
+<span class="w">    </span><span class="n">run_sycl_kernels</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Cleanup</span>
+<span class="w">    </span><span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DRIVER_API</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ptiFlushAllViews</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="linking-pti-in-your-application">
+<h2>Linking PTI in Your Application<a class="headerlink" href="#linking-pti-in-your-application" title="Link to this heading">#</a></h2>
+<p>See the <a class="reference internal" href="linking.html"><span class="doc">Linking</span></a> section for details on integrating PTI SDK into your build system using CMake’s <code class="docutils literal notranslate"><span class="pre">find_package</span></code> or manual linking.</p>
+</section>
+<section id="error-handling">
+<h2>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h2>
+<p>PTI functions return <code class="docutils literal notranslate"><span class="pre">pti_result</span></code> status codes:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">pti_result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">PTI_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_ERROR_BAD_ARGUMENT</span><span class="p">:</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Invalid argument&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_ERROR_NOT_INITIALIZED</span><span class="p">:</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;PTI not initialized (missing callbacks?)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;PTI error: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Always check return values, especially for <code class="docutils literal notranslate"><span class="pre">ptiViewSetCallbacks()</span></code> and <code class="docutils literal notranslate"><span class="pre">ptiViewEnable()</span></code>.</p>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Set callbacks before enabling views</strong> - Required for proper operation</p></li>
+<li><p><strong>Use local collection</strong> - Enable tracing only where needed</p></li>
+<li><p><strong>Check error codes</strong> - Handle failures gracefully</p></li>
+<li><p><strong>Keep callbacks fast</strong> - Defer expensive processing</p></li>
+<li><p><strong>Use appropriate buffer sizes</strong> - Balance memory and callback frequency</p></li>
+<li><p><strong>Enable only needed views</strong> - Reduce overhead</p></li>
+<li><p><strong>Disable views in reverse order</strong> - Clean shutdown pattern</p></li>
+<li><p><strong>Make callbacks thread-safe</strong> - Use synchronization primitives</p></li>
+<li><p><strong>Free buffers after processing</strong> - Prevent memory leaks</p></li>
+<li><p><strong>Test with different workloads</strong> - Verify performance and correctness</p></li>
+</ol>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Explore the <a class="reference internal" href="samples.html"><span class="doc">Code Samples and Examples</span></a> for complete working examples</p></li>
+<li><p>Review the <a class="reference internal" href="view_api_ref.html"><span class="doc">PTI View API Reference</span></a> for detailed function documentation</p></li>
+<li><p>Check <a class="reference internal" href="linking.html"><span class="doc">Linking</span></a> for integration with your build system</p></li>
+</ul>
+<p>For additional help, see the <a class="reference external" href="https://github.com/intel/pti-gpu">GitHub repository</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="samples.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Code Samples and Examples</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="metrics_guide.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hardware Metrics Collection</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts">Core Concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-types">View Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#callbacks">Callbacks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-collection">Local Collection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-workflow">Basic Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-example">Minimal Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-usage-patterns">API Usage Patterns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-callbacks">Setting Up Callbacks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-and-disabling-views">Enabling and Disabling Views</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-records-in-callbacks">Processing Records in Callbacks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-correlation-ids">External Correlation IDs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#threading-considerations">Threading Considerations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thread-safety">Thread Safety</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-invocation">Callback Invocation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-threaded-applications">Multi-Threaded Applications</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-overhead">Performance Overhead</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-overhead">Understanding Overhead</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimizing-overhead">Minimizing Overhead</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-local-collection-support">Checking Local Collection Support</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">Advanced Topics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-timestamps">Custom Timestamps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flushing-views">Flushing Views</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-current-timestamp">Getting Current Timestamp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fine-grained-api-filtering">Fine-Grained API Filtering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api-id-headers">API ID Headers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linking-pti-in-your-application">Linking PTI in Your Application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Intel Corporation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Intel Corporation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

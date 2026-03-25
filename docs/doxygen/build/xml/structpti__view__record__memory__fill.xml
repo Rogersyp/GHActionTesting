@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structpti__view__record__memory__fill" kind="struct" language="C++" prot="public">
+    <compoundname>pti_view_record_memory_fill</compoundname>
+    <includes refid="pti__view_8h" local="no">pti_view.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a4bb0ee70909759acd6c68a83934ba4b8" prot="public" static="no" mutable="no">
+        <type><ref refid="structpti__view__record__base" kindref="compound">pti_view_record_base</ref></type>
+        <definition>pti_view_record_base pti_view_record_memory_fill::_view_kind</definition>
+        <argsstring></argsstring>
+        <name>_view_kind</name>
+        <qualifiedname>pti_view_record_memory_fill::_view_kind</qualifiedname>
+        <briefdescription>
+<para>Base record. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="285" column="24" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a615b0760796a2da3d577d89c35f8088e" prot="public" static="no" mutable="no">
+        <type><ref refid="pti__view_8h_1a5482ac6dfef445e7fcb18085ef6665eb" kindref="member">pti_view_memory_type</ref></type>
+        <definition>pti_view_memory_type pti_view_record_memory_fill::_mem_type</definition>
+        <argsstring></argsstring>
+        <name>_mem_type</name>
+        <qualifiedname>pti_view_record_memory_fill::_mem_type</qualifiedname>
+        <briefdescription>
+<para>Type of memory filled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="286" column="24" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1ae0d70b8e8d25020854f1e075743c5116" prot="public" static="no" mutable="no">
+        <type><ref refid="pti_8h_1a401ee6d5335594044349d949d9b3971b" kindref="member">pti_backend_queue_t</ref></type>
+        <definition>pti_backend_queue_t pti_view_record_memory_fill::_queue_handle</definition>
+        <argsstring></argsstring>
+        <name>_queue_handle</name>
+        <qualifiedname>pti_view_record_memory_fill::_queue_handle</qualifiedname>
+        <briefdescription>
+<para>Device back-end queue handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="287" column="23" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1ad2833d34ce9b7fe2ae835183b9a2d04a" prot="public" static="no" mutable="no">
+        <type><ref refid="pti_8h_1a4250eea6e2cffd20cb11ba60f2875d92" kindref="member">pti_backend_ctx_t</ref></type>
+        <definition>pti_backend_ctx_t pti_view_record_memory_fill::_context_handle</definition>
+        <argsstring></argsstring>
+        <name>_context_handle</name>
+        <qualifiedname>pti_view_record_memory_fill::_context_handle</qualifiedname>
+        <briefdescription>
+<para>Context handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="288" column="21" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a19d1da3249d879ec9d05dc0b3eaf33e9" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* pti_view_record_memory_fill::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <qualifiedname>pti_view_record_memory_fill::_name</qualifiedname>
+        <briefdescription>
+<para>Back-end API name making a memory fill. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="289" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a2460f114e05d8ffacecaa88ed91555c9" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char pti_view_record_memory_fill::_pci_address[PTI_MAX_PCI_ADDRESS_SIZE]</definition>
+        <argsstring>[PTI_MAX_PCI_ADDRESS_SIZE]</argsstring>
+        <name>_pci_address</name>
+        <qualifiedname>pti_view_record_memory_fill::_pci_address</qualifiedname>
+        <briefdescription>
+<para>Device pci_address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="290" column="8" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a8a375284c4addfc0bfc20cd3e5c656aa" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pti_view_record_memory_fill::_device_uuid[PTI_MAX_DEVICE_UUID_SIZE]</definition>
+        <argsstring>[PTI_MAX_DEVICE_UUID_SIZE]</argsstring>
+        <name>_device_uuid</name>
+        <qualifiedname>pti_view_record_memory_fill::_device_uuid</qualifiedname>
+        <briefdescription>
+<para>Device uuid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="291" column="11" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a6fb1f47d849b0d52cca1479778c969f8" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_mem_op_id</definition>
+        <argsstring></argsstring>
+        <name>_mem_op_id</name>
+        <qualifiedname>pti_view_record_memory_fill::_mem_op_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory operation ID, unique among all memory operations instances </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="292" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1ab97597eac21197925ccba4415852d95a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_memory_fill::_correlation_id</definition>
+        <argsstring></argsstring>
+        <name>_correlation_id</name>
+        <qualifiedname>pti_view_record_memory_fill::_correlation_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ID provided by user, marking some external to PTI operations </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="294" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a4cbdad51f515f834ce1a2636128e38a4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_memory_fill::_thread_id</definition>
+        <argsstring></argsstring>
+        <name>_thread_id</name>
+        <qualifiedname>pti_view_record_memory_fill::_thread_id</qualifiedname>
+        <briefdescription>
+<para>Thread ID from which operation submitted. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="296" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a41ebaf0b3964d325db5ec2848c76c6fd" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_append_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_append_timestamp</name>
+        <qualifiedname>pti_view_record_memory_fill::_append_timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timestamp of memory fill appending to back-end command list, ns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="297" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1adc3fec27c809cf0e296e537ccfd560bb" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_start_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_start_timestamp</name>
+        <qualifiedname>pti_view_record_memory_fill::_start_timestamp</qualifiedname>
+        <briefdescription>
+<para>Timestamp of memory fill start on device, ns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="299" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a4a5e5e6004ec9fcc88980f2e93a73812" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_end_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_end_timestamp</name>
+        <qualifiedname>pti_view_record_memory_fill::_end_timestamp</qualifiedname>
+        <briefdescription>
+<para>Timestamp of memory fill completion on device, ns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="300" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a4c5d8e95d567a7661e089c35aa153964" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_submit_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_submit_timestamp</name>
+        <qualifiedname>pti_view_record_memory_fill::_submit_timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timestamp of memory fill command list submission to device, ns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="301" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a9435b6b8ffd4fa9641a2d3bffb5bf438" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_bytes</definition>
+        <argsstring></argsstring>
+        <name>_bytes</name>
+        <qualifiedname>pti_view_record_memory_fill::_bytes</qualifiedname>
+        <briefdescription>
+<para>Number of bytes filled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="303" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1a215cc38b9fffe0143c173257dcdb24fe" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_value_for_set</definition>
+        <argsstring></argsstring>
+        <name>_value_for_set</name>
+        <qualifiedname>pti_view_record_memory_fill::_value_for_set</qualifiedname>
+        <briefdescription>
+<para>Value filled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="304" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__memory__fill_1ae61af8ff1fbe18caa166251081ec31db" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_memory_fill::_sycl_queue_id</definition>
+        <argsstring></argsstring>
+        <name>_sycl_queue_id</name>
+        <qualifiedname>pti_view_record_memory_fill::_sycl_queue_id</qualifiedname>
+        <briefdescription>
+<para>Device front-end queue id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="305" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Device Memory Fill operation View record type. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>pti_view_record_base</label>
+        <link refid="structpti__view__record__base"/>
+      </node>
+      <node id="1">
+        <label>pti_view_record_memory_fill</label>
+        <link refid="structpti__view__record__memory__fill"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_view_kind</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="284" column="1" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="284" bodyend="306"/>
+    <listofallmembers>
+      <member refid="structpti__view__record__memory__fill_1a41ebaf0b3964d325db5ec2848c76c6fd" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_append_timestamp</name></member>
+      <member refid="structpti__view__record__memory__fill_1a9435b6b8ffd4fa9641a2d3bffb5bf438" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_bytes</name></member>
+      <member refid="structpti__view__record__memory__fill_1ad2833d34ce9b7fe2ae835183b9a2d04a" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_context_handle</name></member>
+      <member refid="structpti__view__record__memory__fill_1ab97597eac21197925ccba4415852d95a" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_correlation_id</name></member>
+      <member refid="structpti__view__record__memory__fill_1a8a375284c4addfc0bfc20cd3e5c656aa" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_device_uuid</name></member>
+      <member refid="structpti__view__record__memory__fill_1a4a5e5e6004ec9fcc88980f2e93a73812" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_end_timestamp</name></member>
+      <member refid="structpti__view__record__memory__fill_1a6fb1f47d849b0d52cca1479778c969f8" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_mem_op_id</name></member>
+      <member refid="structpti__view__record__memory__fill_1a615b0760796a2da3d577d89c35f8088e" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_mem_type</name></member>
+      <member refid="structpti__view__record__memory__fill_1a19d1da3249d879ec9d05dc0b3eaf33e9" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_name</name></member>
+      <member refid="structpti__view__record__memory__fill_1a2460f114e05d8ffacecaa88ed91555c9" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_pci_address</name></member>
+      <member refid="structpti__view__record__memory__fill_1ae0d70b8e8d25020854f1e075743c5116" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_queue_handle</name></member>
+      <member refid="structpti__view__record__memory__fill_1adc3fec27c809cf0e296e537ccfd560bb" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_start_timestamp</name></member>
+      <member refid="structpti__view__record__memory__fill_1a4c5d8e95d567a7661e089c35aa153964" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_submit_timestamp</name></member>
+      <member refid="structpti__view__record__memory__fill_1ae61af8ff1fbe18caa166251081ec31db" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_sycl_queue_id</name></member>
+      <member refid="structpti__view__record__memory__fill_1a4cbdad51f515f834ce1a2636128e38a4" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_thread_id</name></member>
+      <member refid="structpti__view__record__memory__fill_1a215cc38b9fffe0143c173257dcdb24fe" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_value_for_set</name></member>
+      <member refid="structpti__view__record__memory__fill_1a4bb0ee70909759acd6c68a83934ba4b8" prot="public" virt="non-virtual"><scope>pti_view_record_memory_fill</scope><name>_view_kind</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

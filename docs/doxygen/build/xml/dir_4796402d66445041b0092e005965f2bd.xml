@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_4796402d66445041b0092e005965f2bd" kind="dir">
+    <compoundname>pti</compoundname>
+    <innerfile refid="pti_8h">pti.h</innerfile>
+    <innerfile refid="pti__callback_8h">pti_callback.h</innerfile>
+    <innerfile refid="pti__driver__levelzero__api__ids_8h">pti_driver_levelzero_api_ids.h</innerfile>
+    <innerfile refid="pti__metrics_8h">pti_metrics.h</innerfile>
+    <innerfile refid="pti__metrics__scope_8h">pti_metrics_scope.h</innerfile>
+    <innerfile refid="pti__runtime__sycl__api__ids_8h">pti_runtime_sycl_api_ids.h</innerfile>
+    <innerfile refid="pti__view_8h">pti_view.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/"/>
+  </compounddef>
+</doxygen>

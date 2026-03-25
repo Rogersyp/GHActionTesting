@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structpti__metrics__group__properties__t" kind="struct" language="C++" prot="public">
+    <compoundname>pti_metrics_group_properties_t</compoundname>
+    <includes refid="pti__metrics_8h" local="no">pti_metrics.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpti__metrics__group__properties__t_1a6aa5dfe18a78a75a7cbb4d1a4b5e9d3b" prot="public" static="no" mutable="no">
+        <type><ref refid="pti__metrics_8h_1a62ff57ed37464a3e4f04acc17804574e" kindref="member">pti_metrics_group_handle_t</ref></type>
+        <definition>pti_metrics_group_handle_t pti_metrics_group_properties_t::_handle</definition>
+        <argsstring></argsstring>
+        <name>_handle</name>
+        <qualifiedname>pti_metrics_group_properties_t::_handle</qualifiedname>
+        <briefdescription>
+<para>Internal handle for the metric group. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="110" column="30" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__metrics__group__properties__t_1afc78d9635f046b86c5042cc81121bb89" prot="public" static="no" mutable="no">
+        <type><ref refid="pti__metrics_8h_1a6f7332a3f01479449fbcfbef68df54a1" kindref="member">pti_metrics_group_type</ref></type>
+        <definition>pti_metrics_group_type pti_metrics_group_properties_t::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <qualifiedname>pti_metrics_group_properties_t::_type</qualifiedname>
+        <briefdescription>
+<para>Sampling type of the metric group. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="111" column="26" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__metrics__group__properties__t_1a80a87257d9721e869e074dd01b9fb03a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_metrics_group_properties_t::_domain</definition>
+        <argsstring></argsstring>
+        <name>_domain</name>
+        <qualifiedname>pti_metrics_group_properties_t::_domain</qualifiedname>
+        <briefdescription>
+<para>Hardware domain responsible for collecting the metric group. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="112" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__metrics__group__properties__t_1a808411999e6a05b224daf14530a83f1d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_metrics_group_properties_t::_metric_count</definition>
+        <argsstring></argsstring>
+        <name>_metric_count</name>
+        <qualifiedname>pti_metrics_group_properties_t::_metric_count</qualifiedname>
+        <briefdescription>
+<para>Number of metrics in the metric group. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="113" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__metrics__group__properties__t_1a44e31394f042cda4983f7c8cd023b810" prot="public" static="no" mutable="no">
+        <type><ref refid="structpti__metric__properties__t" kindref="compound">pti_metric_properties_t</ref> *</type>
+        <definition>pti_metric_properties_t* pti_metrics_group_properties_t::_metric_properties</definition>
+        <argsstring></argsstring>
+        <name>_metric_properties</name>
+        <qualifiedname>pti_metrics_group_properties_t::_metric_properties</qualifiedname>
+        <briefdescription>
+<para>Convenience pointer to buffer where metric properties in the metric group can be saved. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="114" column="27" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__metrics__group__properties__t_1a01e17b49a81a82a01ec9770118eba7e7" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* pti_metrics_group_properties_t::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <qualifiedname>pti_metrics_group_properties_t::_name</qualifiedname>
+        <briefdescription>
+<para>Name of the metric group. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="121" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__metrics__group__properties__t_1a5213dea107d827eedcff185bb686d49d" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* pti_metrics_group_properties_t::_description</definition>
+        <argsstring></argsstring>
+        <name>_description</name>
+        <qualifiedname>pti_metrics_group_properties_t::_description</qualifiedname>
+        <briefdescription>
+<para>Description of the metric group. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="122" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>pti_metric_properties_t</label>
+        <link refid="structpti__metric__properties__t"/>
+      </node>
+      <node id="1">
+        <label>pti_metrics_group_properties_t</label>
+        <link refid="structpti__metrics__group__properties__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_metric_properties</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" line="109" column="1" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_metrics.h" bodystart="109" bodyend="123"/>
+    <listofallmembers>
+      <member refid="structpti__metrics__group__properties__t_1a5213dea107d827eedcff185bb686d49d" prot="public" virt="non-virtual"><scope>pti_metrics_group_properties_t</scope><name>_description</name></member>
+      <member refid="structpti__metrics__group__properties__t_1a80a87257d9721e869e074dd01b9fb03a" prot="public" virt="non-virtual"><scope>pti_metrics_group_properties_t</scope><name>_domain</name></member>
+      <member refid="structpti__metrics__group__properties__t_1a6aa5dfe18a78a75a7cbb4d1a4b5e9d3b" prot="public" virt="non-virtual"><scope>pti_metrics_group_properties_t</scope><name>_handle</name></member>
+      <member refid="structpti__metrics__group__properties__t_1a808411999e6a05b224daf14530a83f1d" prot="public" virt="non-virtual"><scope>pti_metrics_group_properties_t</scope><name>_metric_count</name></member>
+      <member refid="structpti__metrics__group__properties__t_1a44e31394f042cda4983f7c8cd023b810" prot="public" virt="non-virtual"><scope>pti_metrics_group_properties_t</scope><name>_metric_properties</name></member>
+      <member refid="structpti__metrics__group__properties__t_1a01e17b49a81a82a01ec9770118eba7e7" prot="public" virt="non-virtual"><scope>pti_metrics_group_properties_t</scope><name>_name</name></member>
+      <member refid="structpti__metrics__group__properties__t_1afc78d9635f046b86c5042cc81121bb89" prot="public" virt="non-virtual"><scope>pti_metrics_group_properties_t</scope><name>_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

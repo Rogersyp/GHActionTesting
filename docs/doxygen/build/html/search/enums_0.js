@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['pti_5fapi_5fclass_0',['pti_api_class',['../pti__view_8h.html#adea8276193878db7312336fd8d609215',1,'pti_view.h']]],
+  ['pti_5fapi_5fgroup_5fid_1',['pti_api_group_id',['../pti__view_8h.html#aaf49a1e9da25b82c742431aed27067cb',1,'pti_view.h']]],
+  ['pti_5fapi_5fid_5fdriver_5flevelzero_2',['pti_api_id_driver_levelzero',['../pti__driver__levelzero__api__ids_8h.html#ae7a18bf07a11e2255dcc16f674bea46e',1,'pti_driver_levelzero_api_ids.h']]],
+  ['pti_5fapi_5fid_5fruntime_5fsycl_3',['pti_api_id_runtime_sycl',['../pti__runtime__sycl__api__ids_8h.html#a6ebf1f34174051cc7beceb351710da05',1,'pti_runtime_sycl_api_ids.h']]],
+  ['pti_5fbackend_5fcommand_5flist_5ftype_4',['pti_backend_command_list_type',['../pti__callback_8h.html#aaa87a5d120561aef02173281caa043c0',1,'pti_callback.h']]],
+  ['pti_5fcallback_5fdomain_5',['pti_callback_domain',['../pti__callback_8h.html#a3e80709e27cd893db543a452b42c0aba',1,'pti_callback.h']]],
+  ['pti_5fcallback_5fphase_6',['pti_callback_phase',['../pti__callback_8h.html#afd55d0f487c74695146b9e59cbfc3c4a',1,'pti_callback.h']]],
+  ['pti_5fgpu_5foperation_5fkind_7',['pti_gpu_operation_kind',['../pti__callback_8h.html#a4caa407eda4511a27015e16682314695',1,'pti_callback.h']]],
+  ['pti_5finternal_5fevent_5ftype_8',['pti_internal_event_type',['../pti__callback_8h.html#a345abfcd7647e56ea4c6c18c745ee515',1,'pti_callback.h']]],
+  ['pti_5fmetric_5ftype_9',['pti_metric_type',['../pti__metrics_8h.html#a852d2be3814d8c0a10fff99fd9281daf',1,'pti_metrics.h']]],
+  ['pti_5fmetric_5fvalue_5ftype_10',['pti_metric_value_type',['../pti__metrics_8h.html#abda7fe6f944bcd5d799e6f5efb77bd4b',1,'pti_metrics.h']]],
+  ['pti_5fmetrics_5fgroup_5ftype_11',['pti_metrics_group_type',['../pti__metrics_8h.html#a6f7332a3f01479449fbcfbef68df54a1',1,'pti_metrics.h']]],
+  ['pti_5fmetrics_5fscope_5fmode_5ft_12',['pti_metrics_scope_mode_t',['../pti__metrics__scope_8h.html#a1f2b857427c648f2eeec2d1637ff7cb5',1,'pti_metrics_scope.h']]],
+  ['pti_5fresult_13',['pti_result',['../pti_8h.html#a2c036fe2f436bc99ab27e48f21fffd7f',1,'pti.h']]],
+  ['pti_5fview_5fexternal_5fkind_14',['pti_view_external_kind',['../pti__view_8h.html#acf0a7c129127e6a1d8abed4977190767',1,'pti_view.h']]],
+  ['pti_5fview_5fkind_15',['pti_view_kind',['../pti__view_8h.html#a20bbe6a6a69574ef3a8b799b04369867',1,'pti_view.h']]],
+  ['pti_5fview_5fmemcpy_5ftype_16',['pti_view_memcpy_type',['../pti__view_8h.html#a506c4c508a8ca3c1d76a9516d0de072d',1,'pti_view.h']]],
+  ['pti_5fview_5fmemory_5ftype_17',['pti_view_memory_type',['../pti__view_8h.html#a5482ac6dfef445e7fcb18085ef6665eb',1,'pti_view.h']]],
+  ['pti_5fview_5foverhead_5fkind_18',['pti_view_overhead_kind',['../pti__view_8h.html#ab45e5b46aee09b24cd4be3b301894790',1,'pti_view.h']]],
+  ['pti_5fview_5fsynchronization_5ftype_19',['pti_view_synchronization_type',['../pti__view_8h.html#add841fa5b158a46131148235f8c0095d',1,'pti_view.h']]]
+];

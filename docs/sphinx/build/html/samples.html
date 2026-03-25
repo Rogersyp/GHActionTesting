@@ -1,0 +1,892 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Code Samples and Examples &#8212; PTI  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9df5baf6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'samples';</script>
+    <link rel="icon" href="_static/favicons.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer’s Guide" href="devguide.html" />
+    <link rel="prev" title="Quick Start" href="quickstart.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">PTI Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What’s New</a></li>
+<li class="toctree-l1"><a class="reference internal" href="systemreqs.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="knownissues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Code Samples and Examples</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="devguide.html">Developer’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_guide.html">Hardware Metrics Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication_tracing.html">Communication Tracing (oneCCL/ITT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="callback_api.html">PTI Callback API (Experimental)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linking.html">Linking</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="view_api_ref.html">PTI View API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_api_ref.html">PTI Metrics API Reference</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/intel/pti-gpu/edit/master/docs/sphinx/source/samples.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/intel/pti-gpu/issues/new?title=Issue%20on%20page%20%2Fsamples.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/samples.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Code Samples and Examples</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-tracing-samples">Basic Tracing Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tracing-samples">Advanced Tracing Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-collection-samples">Metrics Collection Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-samples">Additional Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-running-samples">Building and Running Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output">Sample Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-samples-as-templates">Using Samples as Templates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code-location">Source Code Location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="code-samples-and-examples">
+<h1>Code Samples and Examples<a class="headerlink" href="#code-samples-and-examples" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DRAFT DOCUMENTATION</strong> - This documentation is currently in draft status and subject to change.</p>
+</div>
+<p>PTI SDK includes a comprehensive set of samples demonstrating various tracing capabilities and use cases. All samples are located in the <code class="docutils literal notranslate"><span class="pre">samples/</span></code> directory.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The samples are organized by functionality and complexity, from basic tracing to advanced features like metrics collection and multi-threading.</p>
+</section>
+<section id="basic-tracing-samples">
+<h2>Basic Tracing Samples<a class="headerlink" href="#basic-tracing-samples" title="Link to this heading">#</a></h2>
+<p>These samples demonstrate fundamental PTI SDK capabilities:</p>
+<dl class="simple">
+<dt><strong>vector_sq_add</strong></dt><dd><p>Simple vector square-add operation using SYCL. Demonstrates basic kernel tracing with PTI SDK.</p>
+<ul class="simple">
+<li><p>Traces GPU kernel execution</p></li>
+<li><p>Shows memory copy operations</p></li>
+<li><p>Basic callback implementation</p></li>
+<li><p>Good starting point for new users</p></li>
+</ul>
+</dd>
+<dt><strong>dpc_gemm</strong></dt><dd><p>DPC++ General Matrix Multiply (GEMM) operation with performance tracking.</p>
+<ul class="simple">
+<li><p>Matrix multiplication kernel tracing</p></li>
+<li><p>Performance data collection</p></li>
+<li><p>Demonstrates real computational workload</p></li>
+</ul>
+</dd>
+<dt><strong>onemkl_gemm</strong></dt><dd><p>GEMM using Intel(R) oneMKL library calls.</p>
+<ul class="simple">
+<li><p>Traces library function calls</p></li>
+<li><p>Shows integration with Intel optimized libraries</p></li>
+<li><p>Demonstrates tracing of higher-level APIs</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="advanced-tracing-samples">
+<h2>Advanced Tracing Samples<a class="headerlink" href="#advanced-tracing-samples" title="Link to this heading">#</a></h2>
+<p>These samples showcase more sophisticated PTI SDK features:</p>
+<dl>
+<dt><strong>callback</strong> (<em>Demonstrates experimental Callback API</em>)</dt><dd><p>Advanced callback usage demonstrating the PTI Callback API for real-time GPU operation notifications.</p>
+<ul class="simple">
+<li><p><strong>Location:</strong> <code class="docutils literal notranslate"><span class="pre">samples/callback/</span></code></p></li>
+<li><dl class="simple">
+<dt><strong>Key Features:</strong></dt><dd><ul>
+<li><p>PTI Callback API subscriber initialization</p></li>
+<li><p>Real-time callbacks for GPU operations (appended and completed)</p></li>
+<li><p>External correlation ID injection within callbacks</p></li>
+<li><p>Integration of Callback API with View API</p></li>
+<li><p>API filtering to reduce tracing overhead</p></li>
+<li><p>Instance user data passing between callback phases</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Use Cases:</strong></dt><dd><ul>
+<li><p>Understanding Callback API workflow</p></li>
+<li><p>Building custom correlation systems</p></li>
+<li><p>Real-time GPU operation monitoring</p></li>
+<li><p>Learning advanced PTI features</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Running:</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+./bin/callback
+</pre></div>
+</div>
+<p><strong>What You’ll Learn:</strong></p>
+<ul class="simple">
+<li><p>How to subscribe to callback domains and receive synchronous notifications</p></li>
+<li><p>Pushing and popping external correlation IDs in callbacks</p></li>
+<li><p>Processing <code class="docutils literal notranslate"><span class="pre">pti_callback_gpu_op_data</span></code> structures</p></li>
+<li><p>Combining Callback API with View API for complete profiling</p></li>
+<li><p>When to use Callback API vs View API</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Callback API is experimental and subject to change. See <a class="reference internal" href="callback_api.html"><span class="doc">PTI Callback API (Experimental)</span></a> for complete documentation.</p>
+</div>
+</dd>
+<dt><strong>dpc_gemm_threaded</strong></dt><dd><p>Multi-threaded DPC++ GEMM demonstrating thread-safe tracing.</p>
+<ul class="simple">
+<li><p>Multi-threaded application tracing</p></li>
+<li><p>Thread-safety considerations</p></li>
+<li><p>Concurrent queue management</p></li>
+</ul>
+</dd>
+<dt><strong>dlworkloads</strong></dt><dd><p>Deep learning workload tracing examples.</p>
+<ul class="simple">
+<li><p>Real-world AI/ML workload patterns</p></li>
+<li><p>Complex kernel sequences</p></li>
+<li><p>Performance analysis</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="metrics-collection-samples">
+<h2>Metrics Collection Samples<a class="headerlink" href="#metrics-collection-samples" title="Link to this heading">#</a></h2>
+<p>PTI SDK provides powerful hardware metrics collection capabilities through two complementary APIs: Metrics Scope API (per-kernel metrics) and Metrics API (device-level sampling). The following samples demonstrate various aspects of metrics collection.</p>
+<dl>
+<dt><strong>metrics_scope</strong> (<em>Recommended starting point</em>)</dt><dd><p>Per-kernel hardware metrics collection using Metrics Scope API.</p>
+<ul class="simple">
+<li><p><strong>Location:</strong> <code class="docutils literal notranslate"><span class="pre">samples/metrics_scope/</span></code></p></li>
+<li><dl class="simple">
+<dt><strong>Key Features:</strong></dt><dd><ul>
+<li><p>Automatic metrics collection for individual GPU kernels</p></li>
+<li><p>Demonstrates complete Metrics Scope API workflow</p></li>
+<li><p>Shows buffer management and data processing</p></li>
+<li><p>Correlates metrics with kernel names and IDs</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Use Cases:</strong></dt><dd><ul>
+<li><p>Understanding per-kernel performance characteristics</p></li>
+<li><p>Identifying memory-bound vs compute-bound kernels</p></li>
+<li><p>Analyzing cache hit rates for specific kernels</p></li>
+<li><p>Comparing performance across kernel invocations</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Running:</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+./bin/metrics_scope
+</pre></div>
+</div>
+<p><strong>What You’ll Learn:</strong></p>
+<ul class="simple">
+<li><p>How to configure specific metrics to collect (GpuTime, EuActive, MemoryBandwidth, etc.)</p></li>
+<li><p>Processing collection buffers and extracting per-kernel metric values</p></li>
+<li><p>Interpreting hardware performance counters</p></li>
+<li><p>Integrating metrics collection with your profiling workflows</p></li>
+</ul>
+</dd>
+<dt><strong>metrics_perf</strong></dt><dd><p>Performance metrics gathering using device-level Metrics API.</p>
+<ul class="simple">
+<li><p><strong>Location:</strong> <code class="docutils literal notranslate"><span class="pre">samples/metrics_perf/</span></code></p></li>
+<li><dl class="simple">
+<dt><strong>Key Features:</strong></dt><dd><ul>
+<li><p>Time-based metrics sampling</p></li>
+<li><p>Device and metric group enumeration</p></li>
+<li><p>Continuous collection across application runtime</p></li>
+<li><p>Demonstrates start/stop/pause/resume collection patterns</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Use Cases:</strong></dt><dd><ul>
+<li><p>System-level performance monitoring</p></li>
+<li><p>Understanding overall GPU behavior</p></li>
+<li><p>Time-series analysis of GPU utilization</p></li>
+<li><p>Steady-state performance characterization</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Running:</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+./bin/metrics_perf
+</pre></div>
+</div>
+<p><strong>What You’ll Learn:</strong></p>
+<ul class="simple">
+<li><p>Discovering available devices and metric groups</p></li>
+<li><p>Configuring time-based sampling intervals</p></li>
+<li><p>Retrieving and processing calculated metrics data</p></li>
+<li><p>Working with different metric value types (uint64, float64, etc.)</p></li>
+</ul>
+</dd>
+<dt><strong>metrics_iso3dfd_dpcpp</strong></dt><dd><p>Hardware metrics in a realistic computational workload (ISO3DFD stencil computation).</p>
+<ul class="simple">
+<li><p><strong>Location:</strong> <code class="docutils literal notranslate"><span class="pre">samples/metrics_iso3dfd_dpcpp/</span></code></p></li>
+<li><dl class="simple">
+<dt><strong>Key Features:</strong></dt><dd><ul>
+<li><p>Metrics collection in production-quality workload</p></li>
+<li><p>Integration with complex SYCL kernels</p></li>
+<li><p>Performance analysis of stencil computation patterns</p></li>
+<li><p>Demonstrates real-world profiling scenarios</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Use Cases:</strong></dt><dd><ul>
+<li><p>Profiling scientific computing applications</p></li>
+<li><p>Understanding performance of structured grid computations</p></li>
+<li><p>Optimizing memory access patterns</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Running:</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+./bin/metrics_iso3dfd_dpcpp
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>For detailed API documentation and usage patterns, see <a class="reference internal" href="metrics_guide.html"><span class="doc">Hardware Metrics Collection</span></a> and <a class="reference internal" href="metrics_api_ref.html"><span class="doc">PTI Metrics API Reference</span></a>.</p>
+</section>
+<section id="additional-samples">
+<h2>Additional Samples<a class="headerlink" href="#additional-samples" title="Link to this heading">#</a></h2>
+<dl>
+<dt><strong>iso3dfd_dpcpp</strong></dt><dd><p>3D finite difference operation (ISO3DFD benchmark).</p>
+<ul class="simple">
+<li><p>Production-quality kernel tracing</p></li>
+<li><p>Demonstrates realistic workload profiling</p></li>
+<li><p>Stencil computation pattern</p></li>
+</ul>
+</dd>
+<dt><strong>omp_vec_add</strong></dt><dd><p>OpenMP vector addition with GPU offload tracing.</p>
+<ul class="simple">
+<li><p>OpenMP offload model support</p></li>
+<li><p>Hybrid CPU-GPU tracing</p></li>
+<li><p>Alternative programming model</p></li>
+</ul>
+</dd>
+<dt><strong>itt_ccl</strong></dt><dd><p>Communication tracing for oneCCL (oneAPI Collective Communications Library) operations.</p>
+<ul class="simple">
+<li><p><strong>Location:</strong> <code class="docutils literal notranslate"><span class="pre">samples/itt_ccl/</span></code></p></li>
+<li><p><strong>Platform:</strong> Linux only</p></li>
+<li><dl class="simple">
+<dt><strong>Key Features:</strong></dt><dd><ul>
+<li><p>Traces oneCCL collective operations (allreduce, broadcast, etc.)</p></li>
+<li><p>Uses Intel® ITT (Instrumentation and Tracing Technology) API</p></li>
+<li><p>Demonstrates <code class="docutils literal notranslate"><span class="pre">PTI_VIEW_COMMUNICATION</span></code> view type</p></li>
+<li><p>SYCL + oneCCL integration example</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Use Cases:</strong></dt><dd><ul>
+<li><p>Profiling distributed machine learning training</p></li>
+<li><p>Analyzing communication overhead in multi-GPU applications</p></li>
+<li><p>Understanding collective communication patterns</p></li>
+<li><p>Correlating computation and communication phases</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Running:</strong></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+<span class="c1"># Requires oneCCL to be installed</span>
+./bin/itt_ccl
+</pre></div>
+</div>
+<p><strong>What You’ll Learn:</strong></p>
+<ul class="simple">
+<li><p>How to enable communication tracing with <code class="docutils literal notranslate"><span class="pre">PTI_VIEW_COMMUNICATION</span></code></p></li>
+<li><p>Processing <code class="docutils literal notranslate"><span class="pre">pti_view_record_comms</span></code> records</p></li>
+<li><p>Timing collective operations in distributed workloads</p></li>
+<li><p>Identifying communication bottlenecks</p></li>
+</ul>
+<p>See <a class="reference internal" href="communication_tracing.html"><span class="doc">Communication Tracing (oneCCL/ITT)</span></a> for complete documentation.</p>
+</dd>
+</dl>
+</section>
+<section id="building-and-running-samples">
+<h2>Building and Running Samples<a class="headerlink" href="#building-and-running-samples" title="Link to this heading">#</a></h2>
+<p>All samples are built automatically with PTI SDK.</p>
+<p><strong>Building:</strong></p>
+<p>From the SDK root directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>sdk
+mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>../cmake/toolchains/icpx_toolchain.cmake<span class="w"> </span>..
+make<span class="w"> </span>-j
+</pre></div>
+</div>
+<p><strong>Running on Linux:</strong></p>
+<p>From the <code class="docutils literal notranslate"><span class="pre">build</span></code> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic samples</span>
+./bin/vec_sqadd
+./bin/dpc_gemm
+./bin/onemkl_gemm
+
+<span class="c1"># Advanced samples</span>
+./bin/callback
+./bin/dpc_gemm_threaded
+
+<span class="c1"># Metrics samples</span>
+./bin/metrics_scope
+./bin/metrics_perf
+</pre></div>
+</div>
+<p><strong>Running on Windows:</strong></p>
+<p>From the <code class="docutils literal notranslate"><span class="pre">build</span></code> directory:</p>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="c1">REM Basic samples</span>
+bin\vec_sqadd.exe
+bin\dpc_gemm.exe
+bin\onemkl_gemm.exe
+
+<span class="c1">REM Advanced samples</span>
+bin\callback.exe
+bin\dpc_gemm_threaded.exe
+</pre></div>
+</div>
+</section>
+<section id="sample-output">
+<h2>Sample Output<a class="headerlink" href="#sample-output" title="Link to this heading">#</a></h2>
+<p>Each sample produces output showing:</p>
+<ul class="simple">
+<li><p>GPU device information</p></li>
+<li><p>Kernel execution traces</p></li>
+<li><p>Memory operation traces</p></li>
+<li><p>Timing and performance data</p></li>
+<li><p>Runtime API calls (if enabled)</p></li>
+</ul>
+<p>Example output from <code class="docutils literal notranslate"><span class="pre">vec_sqadd</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Device: Intel(R) Data Center GPU Max 1550
+&gt;&gt;&gt;&gt; Kernel: VecSq
+     Start: 123456789 ns
+     End:   123456890 ns
+     Duration: 101 ns
+&gt;&gt;&gt;&gt; Memory Copy: Host-&gt;Device
+     Size: 20000 bytes
+     Duration: 234 ns
+</pre></div>
+</div>
+</section>
+<section id="using-samples-as-templates">
+<h2>Using Samples as Templates<a class="headerlink" href="#using-samples-as-templates" title="Link to this heading">#</a></h2>
+<p>The samples serve as templates for your own profiling tools:</p>
+<ol class="arabic simple">
+<li><p><strong>Start with vector_sq_add</strong> for basic tracing patterns</p></li>
+<li><p><strong>Study callback sample</strong> for advanced callback techniques</p></li>
+<li><p><strong>Examine dpc_gemm_threaded</strong> for multi-threaded applications</p></li>
+<li><p><strong>Use metrics samples</strong> when hardware counters are needed</p></li>
+</ol>
+<p>Each sample includes:</p>
+<ul class="simple">
+<li><p>Complete source code with comments</p></li>
+<li><p>CMakeLists.txt for building</p></li>
+<li><p>Example output</p></li>
+<li><p>Key concepts demonstrated</p></li>
+</ul>
+</section>
+<section id="source-code-location">
+<h2>Source Code Location<a class="headerlink" href="#source-code-location" title="Link to this heading">#</a></h2>
+<p>All sample source code is available in the repository:</p>
+<ul class="simple">
+<li><p>Local: <code class="docutils literal notranslate"><span class="pre">sdk/samples/</span></code></p></li>
+<li><p>GitHub: <a class="github reference external" href="https://github.com/intel/pti-gpu/tree/master/sdk/samples">intel/pti-gpu</a></p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also refer to the <a class="reference external" href="https://oneapi-src.github.io/oneAPI-samples/">oneAPI Samples Catalog</a> to learn more about the oneAPI ecosystem and find additional examples of GPU programming and profiling.</p>
+</div>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h2>
+<p>After exploring the samples:</p>
+<ol class="arabic simple">
+<li><p>Review the <a class="reference internal" href="devguide.html"><span class="doc">Developer’s Guide</span></a> for detailed tracing API usage patterns</p></li>
+<li><p>Read the <a class="reference internal" href="metrics_guide.html"><span class="doc">Hardware Metrics Collection</span></a> for hardware metrics collection workflows</p></li>
+<li><p>Check the <a class="reference internal" href="view_api_ref.html"><span class="doc">PTI View API Reference</span></a> for complete tracing API documentation</p></li>
+<li><p>See <a class="reference internal" href="metrics_api_ref.html"><span class="doc">PTI Metrics API Reference</span></a> for complete metrics API documentation</p></li>
+<li><p>Modify samples to experiment with different profiling configurations</p></li>
+<li><p>Build your own profiling tools using samples as templates</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="quickstart.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Quick Start</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="devguide.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Developer’s Guide</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-tracing-samples">Basic Tracing Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tracing-samples">Advanced Tracing Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-collection-samples">Metrics Collection Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-samples">Additional Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-running-samples">Building and Running Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output">Sample Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-samples-as-templates">Using Samples as Templates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code-location">Source Code Location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Intel Corporation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Intel Corporation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

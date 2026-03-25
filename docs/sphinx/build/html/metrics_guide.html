@@ -1,0 +1,1237 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hardware Metrics Collection &#8212; PTI  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9df5baf6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'metrics_guide';</script>
+    <link rel="icon" href="_static/favicons.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Communication Tracing (oneCCL/ITT)" href="communication_tracing.html" />
+    <link rel="prev" title="Developer’s Guide" href="devguide.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">PTI Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What’s New</a></li>
+<li class="toctree-l1"><a class="reference internal" href="systemreqs.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="knownissues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">Code Samples and Examples</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="devguide.html">Developer’s Guide</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hardware Metrics Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication_tracing.html">Communication Tracing (oneCCL/ITT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="callback_api.html">PTI Callback API (Experimental)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linking.html">Linking</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="view_api_ref.html">PTI View API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics_api_ref.html">PTI Metrics API Reference</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/intel/pti-gpu/edit/master/docs/sphinx/source/metrics_guide.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/intel/pti-gpu/issues/new?title=Issue%20on%20page%20%2Fmetrics_guide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/metrics_guide.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hardware Metrics Collection</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-each-api">When to Use Each API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-metrics-scope-api-when">Use Metrics Scope API When</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-metrics-api-when">Use Metrics API When</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-metrics">Available Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-scope-api">Metrics Scope API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-overview">Workflow Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-phase">Configuration Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-phase">Collection Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-phase">Evaluation Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-example">Complete Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#device-level-metrics-api">Device-Level Metrics API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Workflow Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovering-devices-and-metrics">Discovering Devices and Metrics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-collection">Configuring Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-collection">Starting and Stopping Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-calculated-data">Retrieving Calculated Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-metrics">Choosing Metrics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-management">Buffer Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-considerations">Performance Considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-with-tracing">Integration with Tracing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-and-known-issues">Limitations and Known Issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-limitations">Current Limitations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-metrics-available">No Metrics Available</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-fails">Collection Fails</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data">Missing Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hardware-metrics-collection">
+<h1>Hardware Metrics Collection<a class="headerlink" href="#hardware-metrics-collection" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DRAFT DOCUMENTATION</strong> - This documentation is currently in draft status and subject to change.</p>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>PTI SDK provides two complementary APIs for collecting hardware performance metrics from Intel GPUs:</p>
+<ol class="arabic simple">
+<li><p><strong>PTI Metrics Scope API</strong> - Per-kernel metrics collection (recommended for most use cases)</p></li>
+<li><p><strong>PTI Metrics API</strong> - Device-level metrics collection with time-based or event-based sampling</p></li>
+</ol>
+<p>Both APIs enable you to gather detailed hardware performance counters such as GPU utilization, memory bandwidth, cache statistics, and execution unit activity.</p>
+</section>
+<section id="when-to-use-each-api">
+<h2>When to Use Each API<a class="headerlink" href="#when-to-use-each-api" title="Link to this heading">#</a></h2>
+<section id="use-metrics-scope-api-when">
+<h3>Use Metrics Scope API When<a class="headerlink" href="#use-metrics-scope-api-when" title="Link to this heading">#</a></h3>
+<p>The Metrics Scope API is recommended for most profiling scenarios because it automatically correlates metrics with individual kernel executions.</p>
+<p><strong>Best for:</strong></p>
+<ul class="simple">
+<li><p>Profiling specific kernels in your application</p></li>
+<li><p>Understanding per-kernel performance characteristics</p></li>
+<li><p>Correlating metrics with kernel names and IDs</p></li>
+<li><p>Analyzing kernels with discrete GPU operations</p></li>
+<li><p>Comparing performance across different kernel invocations</p></li>
+</ul>
+<p><strong>Example use cases:</strong></p>
+<ul class="simple">
+<li><p>“Which kernel is memory-bound?”</p></li>
+<li><p>“What is the cache hit rate for this specific kernel?”</p></li>
+<li><p>“How does GPU utilization vary across different kernels?”</p></li>
+</ul>
+</section>
+<section id="use-metrics-api-when">
+<h3>Use Metrics API When<a class="headerlink" href="#use-metrics-api-when" title="Link to this heading">#</a></h3>
+<p>The device-level Metrics API provides continuous sampling across the entire application runtime.</p>
+<p><strong>Best for:</strong></p>
+<ul class="simple">
+<li><p>Continuous time-based profiling</p></li>
+<li><p>System-level performance monitoring</p></li>
+<li><p>Event-based metric triggers</p></li>
+<li><p>Analyzing overall GPU behavior without kernel granularity</p></li>
+</ul>
+<p><strong>Example use cases:</strong></p>
+<ul class="simple">
+<li><p>“What is the average GPU utilization during application runtime?”</p></li>
+<li><p>“How does memory bandwidth change over time?”</p></li>
+<li><p>“What are the steady-state performance characteristics?”</p></li>
+</ul>
+</section>
+</section>
+<section id="available-metrics">
+<h2>Available Metrics<a class="headerlink" href="#available-metrics" title="Link to this heading">#</a></h2>
+<p>Hardware metrics vary by Intel GPU generation. Common metric categories include:</p>
+<dl class="simple">
+<dt><strong>Compute Metrics</strong></dt><dd><ul class="simple">
+<li><p>GPU utilization percentage</p></li>
+<li><p>Execution Unit (EU) active/stall/idle time</p></li>
+<li><p>Thread occupancy</p></li>
+<li><p>Waves per SIMD</p></li>
+</ul>
+</dd>
+<dt><strong>Memory Metrics</strong></dt><dd><ul class="simple">
+<li><p>Memory read/write bandwidth</p></li>
+<li><p>L1/L3 cache hit rates</p></li>
+<li><p>Memory stalls and wait cycles</p></li>
+<li><p>Uncoalesced memory accesses</p></li>
+</ul>
+</dd>
+<dt><strong>Instruction Metrics</strong></dt><dd><ul class="simple">
+<li><p>Instructions per clock</p></li>
+<li><p>ALU utilization</p></li>
+<li><p>Send instruction statistics</p></li>
+<li><p>Branch/divergence information</p></li>
+</ul>
+</dd>
+<dt><strong>Sampler Metrics</strong></dt><dd><ul class="simple">
+<li><p>Sampler throughput</p></li>
+<li><p>Texture cache statistics</p></li>
+<li><p>Sampler stalls</p></li>
+</ul>
+</dd>
+<dt><strong>Power and Frequency</strong></dt><dd><ul class="simple">
+<li><p>GPU power consumption</p></li>
+<li><p>GPU frequency</p></li>
+<li><p>Temperature (if available)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Use <code class="docutils literal notranslate"><span class="pre">ptiMetricsGetMetricGroups()</span></code> to discover the available metrics for your specific device and GPU generation.</p>
+</section>
+<section id="metrics-scope-api">
+<h2>Metrics Scope API<a class="headerlink" href="#metrics-scope-api" title="Link to this heading">#</a></h2>
+<p>The Metrics Scope API enables automatic per-kernel hardware metrics collection. This section describes the complete workflow.</p>
+<section id="workflow-overview">
+<h3>Workflow Overview<a class="headerlink" href="#workflow-overview" title="Link to this heading">#</a></h3>
+<p>The Metrics Scope API operates in three phases:</p>
+<ol class="arabic simple">
+<li><p><strong>Configuration Phase</strong> - Set up devices and metrics to collect</p></li>
+<li><p><strong>Collection Phase</strong> - Run your GPU workload while metrics are gathered</p></li>
+<li><p><strong>Evaluation Phase</strong> - Process collected data and extract per-kernel metrics</p></li>
+</ol>
+</section>
+<section id="configuration-phase">
+<h3>Configuration Phase<a class="headerlink" href="#configuration-phase" title="Link to this heading">#</a></h3>
+<p><strong>Step 1: Enable Metrics Scope</strong></p>
+<p>Create a scope collection handle:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_metrics.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_metrics_scope.h&quot;</span>
+
+<span class="n">pti_scope_collection_handle_t</span><span class="w"> </span><span class="n">scope_handle</span><span class="p">;</span>
+<span class="n">pti_result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptiMetricsScopeEnable</span><span class="p">(</span><span class="o">&amp;</span><span class="n">scope_handle</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">PTI_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Handle error</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Step 2: Discover Devices</strong></p>
+<p>Get available GPU devices:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Query device count</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">device_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ptiMetricsGetDevices</span><span class="p">(</span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">device_count</span><span class="p">);</span>
+
+<span class="c1">// Get device properties</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pti_device_properties_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">devices</span><span class="p">(</span><span class="n">device_count</span><span class="p">);</span>
+<span class="n">ptiMetricsGetDevices</span><span class="p">(</span><span class="n">devices</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">device_count</span><span class="p">);</span>
+
+<span class="c1">// Select device (example: use first device)</span>
+<span class="n">pti_device_handle_t</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">devices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">_handle</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>Step 3: Configure Metrics</strong></p>
+<p>Specify which metrics to collect:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Select metrics to collect</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">metric_names</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;GpuTime&quot;</span><span class="p">,</span><span class="w">           </span><span class="c1">// GPU execution time</span>
+<span class="w">    </span><span class="s">&quot;GpuCoreClocks&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// GPU core clock cycles</span>
+<span class="w">    </span><span class="s">&quot;EuActive&quot;</span><span class="p">,</span><span class="w">          </span><span class="c1">// Execution unit active time</span>
+<span class="w">    </span><span class="s">&quot;MemoryRead&quot;</span><span class="p">,</span><span class="w">        </span><span class="c1">// Memory read bandwidth</span>
+<span class="w">    </span><span class="s">&quot;CacheHit&quot;</span><span class="w">           </span><span class="c1">// Cache hit rate</span>
+<span class="p">};</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">metric_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="n">pti_result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptiMetricsScopeConfigure</span><span class="p">(</span>
+<span class="w">    </span><span class="n">scope_handle</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PTI_METRICS_SCOPE_AUTO_KERNEL</span><span class="p">,</span><span class="w">  </span><span class="c1">// Automatic per-kernel collection</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">device</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">1</span><span class="p">,</span><span class="w">                               </span><span class="c1">// Number of devices</span>
+<span class="w">    </span><span class="n">metric_names</span><span class="p">,</span>
+<span class="w">    </span><span class="n">metric_count</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Step 4: Set Buffer Size</strong></p>
+<p>Configure collection buffer size:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Query estimated buffer size for N scopes</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">estimated_buffer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ptiMetricsScopeQueryCollectionBufferSize</span><span class="p">(</span>
+<span class="w">    </span><span class="n">scope_handle</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">1000</span><span class="p">,</span><span class="w">  </span><span class="c1">// Estimate for 1000 kernel launches</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">estimated_buffer_size</span><span class="p">);</span>
+
+<span class="c1">// Set the buffer size</span>
+<span class="n">ptiMetricsScopeSetCollectionBufferSize</span><span class="p">(</span>
+<span class="w">    </span><span class="n">scope_handle</span><span class="p">,</span>
+<span class="w">    </span><span class="n">estimated_buffer_size</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="collection-phase">
+<h3>Collection Phase<a class="headerlink" href="#collection-phase" title="Link to this heading">#</a></h3>
+<p>Start metrics collection before running your GPU workload:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Start collection</span>
+<span class="n">ptiMetricsScopeStartCollection</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+
+<span class="c1">// Run your GPU application</span>
+<span class="c1">// All kernel launches will be automatically profiled</span>
+<span class="n">run_sycl_kernels</span><span class="p">();</span>
+
+<span class="c1">// Stop collection</span>
+<span class="n">ptiMetricsScopeStopCollection</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="evaluation-phase">
+<h3>Evaluation Phase<a class="headerlink" href="#evaluation-phase" title="Link to this heading">#</a></h3>
+<p>After collection stops, process the collected data:</p>
+<p><strong>Step 1: Get Collection Buffers</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Get number of collection buffers</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">buffer_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ptiMetricsScopeGetCollectionBuffersCount</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer_count</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">buffer_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">collection_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">collection_buffer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">ptiMetricsScopeGetCollectionBuffer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">scope_handle</span><span class="p">,</span>
+<span class="w">        </span><span class="n">i</span><span class="p">,</span>
+<span class="w">        </span><span class="o">&amp;</span><span class="n">collection_buffer</span><span class="p">,</span>
+<span class="w">        </span><span class="o">&amp;</span><span class="n">collection_buffer_size</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Process this buffer...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Step 2: Query Metrics Buffer Size</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">metrics_buffer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">records_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">ptiMetricsScopeQueryMetricsBufferSize</span><span class="p">(</span>
+<span class="w">    </span><span class="n">scope_handle</span><span class="p">,</span>
+<span class="w">    </span><span class="n">collection_buffer</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">metrics_buffer_size</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">records_count</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Step 3: Calculate Metrics</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Allocate metrics buffer</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">metrics_buffer</span><span class="p">(</span><span class="n">metrics_buffer_size</span><span class="p">);</span>
+
+<span class="c1">// Calculate metrics from collection buffer</span>
+<span class="n">ptiMetricsScopeCalculateMetrics</span><span class="p">(</span>
+<span class="w">    </span><span class="n">scope_handle</span><span class="p">,</span>
+<span class="w">    </span><span class="n">collection_buffer</span><span class="p">,</span>
+<span class="w">    </span><span class="n">metrics_buffer</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">metrics_buffer_size</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">records_count</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Step 4: Get Metadata</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">pti_metrics_scope_record_metadata_t</span><span class="w"> </span><span class="n">metadata</span><span class="p">{};</span>
+<span class="n">metadata</span><span class="p">.</span><span class="n">_struct_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">metadata</span><span class="p">);</span>
+
+<span class="n">ptiMetricsScopeGetMetricsMetadata</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">metadata</span><span class="p">);</span>
+
+<span class="c1">// metadata now contains:</span>
+<span class="c1">// - _metrics_count: number of metrics per record</span>
+<span class="c1">// - _value_types: array of metric value types</span>
+<span class="c1">// - _metric_names: array of metric names</span>
+<span class="c1">// - _metric_units: array of metric units</span>
+</pre></div>
+</div>
+<p><strong>Step 5: Process Records</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_metrics_scope_record_t</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">    </span><span class="n">metrics_buffer</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">records_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Kernel: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_kernel_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  Kernel ID: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_kernel_id</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  Queue: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_queue</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Print each metric value</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">metadata</span><span class="p">.</span><span class="n">_metrics_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metadata</span><span class="p">.</span><span class="n">_metric_names</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Cast based on value type</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">metadata</span><span class="p">.</span><span class="n">_value_types</span><span class="p">[</span><span class="n">m</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_METRIC_VALUE_TYPE_UINT32</span><span class="p">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_metrics_values</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">ui32</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_METRIC_VALUE_TYPE_UINT64</span><span class="p">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_metrics_values</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">ui64</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_METRIC_VALUE_TYPE_FLOAT32</span><span class="p">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_metrics_values</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">fp32</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_METRIC_VALUE_TYPE_FLOAT64</span><span class="p">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_metrics_values</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">fp64</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_METRIC_VALUE_TYPE_BOOL8</span><span class="p">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_metrics_values</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">b8</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="o">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;unknown&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metadata</span><span class="p">.</span><span class="n">_metric_units</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Step 6: Cleanup</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ptiMetricsScopeDisable</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="complete-example">
+<h3>Complete Example<a class="headerlink" href="#complete-example" title="Link to this heading">#</a></h3>
+<p>Here’s a complete working example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_metrics.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pti/pti_metrics_scope.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print_kernel_metrics</span><span class="p">(</span><span class="n">pti_scope_collection_handle_t</span><span class="w"> </span><span class="n">scope_handle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buffer_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ptiMetricsScopeGetCollectionBuffersCount</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer_count</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Get metadata (same for all records)</span>
+<span class="w">    </span><span class="n">pti_metrics_scope_record_metadata_t</span><span class="w"> </span><span class="n">metadata</span><span class="p">{};</span>
+<span class="w">    </span><span class="n">metadata</span><span class="p">.</span><span class="n">_struct_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">metadata</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ptiMetricsScopeGetMetricsMetadata</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">metadata</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">buffer_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">collection_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">collection_buffer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ptiMetricsScopeGetCollectionBuffer</span><span class="p">(</span>
+<span class="w">            </span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">collection_buffer</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">collection_buffer_size</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">metrics_buffer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">records_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ptiMetricsScopeQueryMetricsBufferSize</span><span class="p">(</span>
+<span class="w">            </span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="n">collection_buffer</span><span class="p">,</span>
+<span class="w">            </span><span class="o">&amp;</span><span class="n">metrics_buffer_size</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">records_count</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">metrics_buffer</span><span class="p">(</span><span class="n">metrics_buffer_size</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ptiMetricsScopeCalculateMetrics</span><span class="p">(</span>
+<span class="w">            </span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="n">collection_buffer</span><span class="p">,</span>
+<span class="w">            </span><span class="n">metrics_buffer</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">metrics_buffer_size</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">records_count</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">pti_metrics_scope_record_t</span><span class="o">*&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="n">metrics_buffer</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">records_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Kernel: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_kernel_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">metadata</span><span class="p">.</span><span class="n">_metrics_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metadata</span><span class="p">.</span><span class="n">_metric_names</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">metadata</span><span class="p">.</span><span class="n">_value_types</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PTI_METRIC_VALUE_TYPE_UINT64</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_metrics_values</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">ui64</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">metadata</span><span class="p">.</span><span class="n">_value_types</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PTI_METRIC_VALUE_TYPE_FLOAT64</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">records</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">_metrics_values</span><span class="p">[</span><span class="n">m</span><span class="p">].</span><span class="n">fp64</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metadata</span><span class="p">.</span><span class="n">_metric_units</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pti_scope_collection_handle_t</span><span class="w"> </span><span class="n">scope_handle</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ptiMetricsScopeEnable</span><span class="p">(</span><span class="o">&amp;</span><span class="n">scope_handle</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">device_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ptiMetricsGetDevices</span><span class="p">(</span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">device_count</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pti_device_properties_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">devices</span><span class="p">(</span><span class="n">device_count</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ptiMetricsGetDevices</span><span class="p">(</span><span class="n">devices</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">device_count</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">metrics</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;GpuTime&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;GpuCoreClocks&quot;</span><span class="p">};</span>
+<span class="w">    </span><span class="n">ptiMetricsScopeConfigure</span><span class="p">(</span>
+<span class="w">        </span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="n">PTI_METRICS_SCOPE_AUTO_KERNEL</span><span class="p">,</span>
+<span class="w">        </span><span class="o">&amp;</span><span class="n">devices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">metrics</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">buffer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ptiMetricsScopeQueryCollectionBufferSize</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer_size</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ptiMetricsScopeSetCollectionBufferSize</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">,</span><span class="w"> </span><span class="n">buffer_size</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ptiMetricsScopeStartCollection</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Run your GPU workload here</span>
+<span class="w">    </span><span class="n">run_my_kernels</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">ptiMetricsScopeStopCollection</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">print_kernel_metrics</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ptiMetricsScopeDisable</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="device-level-metrics-api">
+<h2>Device-Level Metrics API<a class="headerlink" href="#device-level-metrics-api" title="Link to this heading">#</a></h2>
+<p>The device-level Metrics API provides time-based and event-based sampling across your entire application runtime.</p>
+<section id="id1">
+<h3>Workflow Overview<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Discover devices and available metric groups</p></li>
+<li><p>Configure metric group collection parameters</p></li>
+<li><p>Start collection</p></li>
+<li><p>Run your workload</p></li>
+<li><p>Stop collection</p></li>
+<li><p>Retrieve calculated data</p></li>
+</ol>
+</section>
+<section id="discovering-devices-and-metrics">
+<h3>Discovering Devices and Metrics<a class="headerlink" href="#discovering-devices-and-metrics" title="Link to this heading">#</a></h3>
+<p><strong>Get Devices:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">device_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ptiMetricsGetDevices</span><span class="p">(</span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">device_count</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pti_device_properties_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">devices</span><span class="p">(</span><span class="n">device_count</span><span class="p">);</span>
+<span class="n">ptiMetricsGetDevices</span><span class="p">(</span><span class="n">devices</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">device_count</span><span class="p">);</span>
+
+<span class="c1">// Print device information</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">devices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Device: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">_model_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  PCI: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">_address</span><span class="p">.</span><span class="n">_domain</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;:&quot;</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">_address</span><span class="p">.</span><span class="n">_bus</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;:&quot;</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">_address</span><span class="p">.</span><span class="n">_device</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.&quot;</span>
+<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">device</span><span class="p">.</span><span class="n">_address</span><span class="p">.</span><span class="n">_function</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Get Metric Groups:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">pti_device_handle_t</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">devices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">_handle</span><span class="p">;</span>
+
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">group_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ptiMetricsGetMetricGroups</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">group_count</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pti_metrics_group_properties_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">groups</span><span class="p">(</span><span class="n">group_count</span><span class="p">);</span>
+<span class="n">ptiMetricsGetMetricGroups</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="n">groups</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">group_count</span><span class="p">);</span>
+
+<span class="c1">// Print metric groups</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">groups</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Metric Group: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">group</span><span class="p">.</span><span class="n">_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  Description: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">group</span><span class="p">.</span><span class="n">_description</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  Type: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">group</span><span class="p">.</span><span class="n">_type</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  Metric Count: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">group</span><span class="p">.</span><span class="n">_metric_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Get Metrics in a Group:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="c1">// Allocate buffer for metric properties</span>
+<span class="n">group</span><span class="p">.</span><span class="n">_metric_properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">pti_metric_properties_t</span><span class="p">[</span><span class="n">group</span><span class="p">.</span><span class="n">_metric_count</span><span class="p">];</span>
+
+<span class="n">ptiMetricsGetMetricsProperties</span><span class="p">(</span>
+<span class="w">    </span><span class="n">group</span><span class="p">.</span><span class="n">_handle</span><span class="p">,</span>
+<span class="w">    </span><span class="n">group</span><span class="p">.</span><span class="n">_metric_properties</span><span class="p">);</span>
+
+<span class="c1">// Print metrics</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">group</span><span class="p">.</span><span class="n">_metric_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">metric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">group</span><span class="p">.</span><span class="n">_metric_properties</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  Metric: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metric</span><span class="p">.</span><span class="n">_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;    Description: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metric</span><span class="p">.</span><span class="n">_description</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;    Units: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metric</span><span class="p">.</span><span class="n">_units</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="configuring-collection">
+<h3>Configuring Collection<a class="headerlink" href="#configuring-collection" title="Link to this heading">#</a></h3>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">pti_metrics_group_collection_params_t</span><span class="w"> </span><span class="n">params</span><span class="p">{};</span>
+<span class="n">params</span><span class="p">.</span><span class="n">_struct_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+<span class="n">params</span><span class="p">.</span><span class="n">_group_handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">_handle</span><span class="p">;</span>
+<span class="n">params</span><span class="p">.</span><span class="n">_sampling_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000000</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1ms in nanoseconds</span>
+<span class="n">params</span><span class="p">.</span><span class="n">_time_aggr_window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">ptiMetricsConfigureCollection</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="starting-and-stopping-collection">
+<h3>Starting and Stopping Collection<a class="headerlink" href="#starting-and-stopping-collection" title="Link to this heading">#</a></h3>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Start collection</span>
+<span class="n">ptiMetricsStartCollection</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+
+<span class="c1">// Run your workload</span>
+<span class="n">run_application</span><span class="p">();</span>
+
+<span class="c1">// Stop collection</span>
+<span class="n">ptiMetricsStopCollection</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>With Pause/Resume:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Start paused</span>
+<span class="n">ptiMetricsStartCollectionPaused</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+
+<span class="c1">// Resume when ready</span>
+<span class="n">ptiMetricsResumeCollection</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+
+<span class="c1">// Can pause anytime</span>
+<span class="n">ptiMetricsPauseCollection</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+
+<span class="c1">// Resume again</span>
+<span class="n">ptiMetricsResumeCollection</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+
+<span class="c1">// Stop</span>
+<span class="n">ptiMetricsStopCollection</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="retrieving-calculated-data">
+<h3>Retrieving Calculated Data<a class="headerlink" href="#retrieving-calculated-data" title="Link to this heading">#</a></h3>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">pti_metrics_group_handle_t</span><span class="w"> </span><span class="n">group_handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">_handle</span><span class="p">;</span>
+
+<span class="c1">// Query data size</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">value_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ptiMetricsGetCalculatedData</span><span class="p">(</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="n">group_handle</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value_count</span><span class="p">);</span>
+
+<span class="c1">// Allocate buffer</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pti_value_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">values</span><span class="p">(</span><span class="n">value_count</span><span class="p">);</span>
+
+<span class="c1">// Get data</span>
+<span class="n">ptiMetricsGetCalculatedData</span><span class="p">(</span>
+<span class="w">    </span><span class="n">device</span><span class="p">,</span>
+<span class="w">    </span><span class="n">group_handle</span><span class="p">,</span>
+<span class="w">    </span><span class="n">values</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">value_count</span><span class="p">);</span>
+
+<span class="c1">// Process values</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">metric_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">_metric_count</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">sample_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value_count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">metric_count</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">sample_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sample &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">metric_count</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">metric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">groups</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">_metric_properties</span><span class="p">[</span><span class="n">m</span><span class="p">];</span>
+<span class="w">        </span><span class="n">pti_value_t</span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">metric_count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m</span><span class="p">];</span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metric</span><span class="p">.</span><span class="n">_name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">metric</span><span class="p">.</span><span class="n">_value_type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_METRIC_VALUE_TYPE_UINT64</span><span class="p">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">ui64</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">PTI_METRIC_VALUE_TYPE_FLOAT64</span><span class="p">:</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">fp64</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// Handle other types...</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">metric</span><span class="p">.</span><span class="n">_units</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<section id="choosing-metrics">
+<h3>Choosing Metrics<a class="headerlink" href="#choosing-metrics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Start small</strong> - Begin with a few key metrics (GpuTime, EuActive, MemoryBandwidth)</p></li>
+<li><p><strong>Understand overhead</strong> - More metrics = more overhead (typically 10-30%)</p></li>
+<li><p><strong>Check availability</strong> - Use <code class="docutils literal notranslate"><span class="pre">ptiMetricsGetMetricGroups()</span></code> to see what’s available</p></li>
+<li><p><strong>Read descriptions</strong> - Metric descriptions explain what they measure</p></li>
+</ul>
+</section>
+<section id="buffer-management">
+<h3>Buffer Management<a class="headerlink" href="#buffer-management" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Size appropriately</strong> - Query estimated size, then add 20% margin</p></li>
+<li><p><strong>Multiple buffers</strong> - PTI allocates new buffers as needed during collection</p></li>
+<li><p><strong>Process promptly</strong> - Process collection buffers after stopping collection</p></li>
+</ul>
+</section>
+<section id="performance-considerations">
+<h3>Performance Considerations<a class="headerlink" href="#performance-considerations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Metrics overhead</strong> - Expect 10-30% performance impact during collection</p></li>
+<li><p><strong>Sampling interval</strong> - Lower intervals (more frequent sampling) = more overhead</p></li>
+<li><p><strong>Metric selection</strong> - Fewer metrics = lower overhead</p></li>
+<li><p><strong>Buffer size</strong> - Larger buffers reduce internal processing frequency</p></li>
+</ul>
+</section>
+<section id="integration-with-tracing">
+<h3>Integration with Tracing<a class="headerlink" href="#integration-with-tracing" title="Link to this heading">#</a></h3>
+<p>You can combine metrics collection with PTI View tracing:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable both tracing and metrics</span>
+<span class="n">ptiViewSetCallbacks</span><span class="p">(</span><span class="n">buffer_requested</span><span class="p">,</span><span class="w"> </span><span class="n">buffer_completed</span><span class="p">);</span>
+<span class="n">ptiViewEnable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+
+<span class="n">ptiMetricsScopeEnable</span><span class="p">(</span><span class="o">&amp;</span><span class="n">scope_handle</span><span class="p">);</span>
+<span class="n">ptiMetricsScopeConfigure</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+<span class="n">ptiMetricsScopeStartCollection</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+
+<span class="c1">// Run workload - both tracing and metrics active</span>
+<span class="n">run_kernels</span><span class="p">();</span>
+
+<span class="n">ptiViewDisable</span><span class="p">(</span><span class="n">PTI_VIEW_DEVICE_GPU_KERNEL</span><span class="p">);</span>
+<span class="n">ptiMetricsScopeStopCollection</span><span class="p">(</span><span class="n">scope_handle</span><span class="p">);</span>
+
+<span class="c1">// Correlate data using kernel_id fields</span>
+</pre></div>
+</div>
+</section>
+<section id="error-handling">
+<h3>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h3>
+<p>Always check return codes:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">pti_result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptiMetricsScopeEnable</span><span class="p">(</span><span class="o">&amp;</span><span class="n">scope_handle</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">PTI_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to enable metrics scope: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="limitations-and-known-issues">
+<h2>Limitations and Known Issues<a class="headerlink" href="#limitations-and-known-issues" title="Link to this heading">#</a></h2>
+<section id="current-limitations">
+<h3>Current Limitations<a class="headerlink" href="#current-limitations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>One metric group per device</strong> - Currently only one metric group can be configured per device</p></li>
+<li><p><strong>AUTO_KERNEL mode only</strong> - USER mode for Metrics Scope is not yet implemented</p></li>
+<li><p><strong>Mutually exclusive metrics</strong> - Some metrics cannot be collected simultaneously</p></li>
+<li><p><strong>Hardware dependencies</strong> - Metric availability varies by GPU generation</p></li>
+</ul>
+</section>
+<section id="hardware-requirements">
+<h3>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Intel GPU with Level Zero driver support</p></li>
+<li><p>Level Zero version 1.9.0+ for optimal performance</p></li>
+<li><p>Appropriate permissions for accessing performance counters</p></li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<section id="no-metrics-available">
+<h3>No Metrics Available<a class="headerlink" href="#no-metrics-available" title="Link to this heading">#</a></h3>
+<p>If <code class="docutils literal notranslate"><span class="pre">ptiMetricsGetMetricGroups()</span></code> returns zero groups:</p>
+<ul class="simple">
+<li><p>Check Level Zero driver installation</p></li>
+<li><p>Verify GPU hardware support</p></li>
+<li><p>Ensure application runs with appropriate permissions</p></li>
+<li><p>Check for conflicting profiling tools</p></li>
+</ul>
+</section>
+<section id="collection-fails">
+<h3>Collection Fails<a class="headerlink" href="#collection-fails" title="Link to this heading">#</a></h3>
+<p>If <code class="docutils literal notranslate"><span class="pre">ptiMetricsScopeStartCollection()</span></code> fails:</p>
+<ul class="simple">
+<li><p>Verify configuration was successful</p></li>
+<li><p>Check buffer size is adequate</p></li>
+<li><p>Ensure no other tool is using performance counters</p></li>
+<li><p>Try reducing number of metrics</p></li>
+</ul>
+</section>
+<section id="missing-data">
+<h3>Missing Data<a class="headerlink" href="#missing-data" title="Link to this heading">#</a></h3>
+<p>If <code class="docutils literal notranslate"><span class="pre">records_count</span></code> is zero:</p>
+<ul class="simple">
+<li><p>Ensure kernels actually executed during collection</p></li>
+<li><p>Check that collection started before kernel launches</p></li>
+<li><p>Verify buffer size is sufficient</p></li>
+</ul>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Explore <a class="reference internal" href="samples.html"><span class="doc">Code Samples and Examples</span></a> for complete working examples</p></li>
+<li><p>Review <a class="reference internal" href="metrics_api_ref.html"><span class="doc">PTI Metrics API Reference</span></a> for detailed API documentation</p></li>
+<li><p>See <a class="reference internal" href="devguide.html"><span class="doc">Developer’s Guide</span></a> for integration with tracing</p></li>
+<li><p>Check sample code in <code class="docutils literal notranslate"><span class="pre">samples/metrics_scope/</span></code> and <code class="docutils literal notranslate"><span class="pre">samples/metrics_perf/</span></code></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="devguide.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Developer’s Guide</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="communication_tracing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Communication Tracing (oneCCL/ITT)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-each-api">When to Use Each API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-metrics-scope-api-when">Use Metrics Scope API When</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-metrics-api-when">Use Metrics API When</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-metrics">Available Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrics-scope-api">Metrics Scope API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-overview">Workflow Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-phase">Configuration Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-phase">Collection Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-phase">Evaluation Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-example">Complete Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#device-level-metrics-api">Device-Level Metrics API</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Workflow Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovering-devices-and-metrics">Discovering Devices and Metrics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-collection">Configuring Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-stopping-collection">Starting and Stopping Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-calculated-data">Retrieving Calculated Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-metrics">Choosing Metrics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-management">Buffer Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-considerations">Performance Considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-with-tracing">Integration with Tracing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-and-known-issues">Limitations and Known Issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-limitations">Current Limitations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-metrics-available">No Metrics Available</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-fails">Collection Fails</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data">Missing Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Intel Corporation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Intel Corporation.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

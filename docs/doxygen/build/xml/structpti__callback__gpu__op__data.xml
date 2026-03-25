@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structpti__callback__gpu__op__data" kind="struct" language="C++" prot="public">
+    <compoundname>pti_callback_gpu_op_data</compoundname>
+    <includes refid="pti__callback_8h" local="no">pti_callback.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1ab81a692e4cb5f9dcb430e60c83e6fb24" prot="public" static="no" mutable="no">
+        <type><ref refid="pti__callback_8h_1a3e80709e27cd893db543a452b42c0aba" kindref="member">pti_callback_domain</ref></type>
+        <definition>pti_callback_domain pti_callback_gpu_op_data::_domain</definition>
+        <argsstring></argsstring>
+        <name>_domain</name>
+        <qualifiedname>pti_callback_gpu_op_data::_domain</qualifiedname>
+        <briefdescription>
+<para>domain of the callback </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="122" column="35" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1a9f0e998ccc548658d2f69c775f70ef3d" prot="public" static="no" mutable="no">
+        <type><ref refid="pti__callback_8h_1aaa87a5d120561aef02173281caa043c0" kindref="member">pti_backend_command_list_type</ref></type>
+        <definition>pti_backend_command_list_type pti_callback_gpu_op_data::_cmd_list_properties</definition>
+        <argsstring></argsstring>
+        <name>_cmd_list_properties</name>
+        <qualifiedname>pti_callback_gpu_op_data::_cmd_list_properties</qualifiedname>
+        <briefdescription>
+<para>immediate, mutable,.. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="123" column="35" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1ad66b57f2a1ad8db4d87ad4331e7f16a4" prot="public" static="no" mutable="no">
+        <type><ref refid="pti_8h_1ab9bd59bbeb3f837807f7ab97888b03e8" kindref="member">pti_backend_command_list_t</ref></type>
+        <definition>pti_backend_command_list_t pti_callback_gpu_op_data::_cmd_list_handle</definition>
+        <argsstring></argsstring>
+        <name>_cmd_list_handle</name>
+        <qualifiedname>pti_callback_gpu_op_data::_cmd_list_handle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Device back-end command list handle, could be nullptr if unknown or when several operations with different command lists reported together </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="124" column="35" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1abe609c2ad6cd25689dfa52f9ff021960" prot="public" static="no" mutable="no">
+        <type><ref refid="pti_8h_1a401ee6d5335594044349d949d9b3971b" kindref="member">pti_backend_queue_t</ref></type>
+        <definition>pti_backend_queue_t pti_callback_gpu_op_data::_queue_handle</definition>
+        <argsstring></argsstring>
+        <name>_queue_handle</name>
+        <qualifiedname>pti_callback_gpu_op_data::_queue_handle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Device back-end queue handle, could be nullptr if unknown when several operations with different command lists reported together </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="128" column="35" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1ac9200a6d01681fb2242f2789a76e070d" prot="public" static="no" mutable="no">
+        <type><ref refid="pti_8h_1a22e6a9f524aa0034d2c1a4112dadcfc1" kindref="member">pti_device_handle_t</ref></type>
+        <definition>pti_device_handle_t pti_callback_gpu_op_data::_device_handle</definition>
+        <argsstring></argsstring>
+        <name>_device_handle</name>
+        <qualifiedname>pti_callback_gpu_op_data::_device_handle</qualifiedname>
+        <briefdescription>
+<para>Device handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="132" column="35" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1a21ab0971968117ad759eb3076b2820de" prot="public" static="no" mutable="no">
+        <type><ref refid="pti__callback_8h_1afd55d0f487c74695146b9e59cbfc3c4a" kindref="member">pti_callback_phase</ref></type>
+        <definition>pti_callback_phase pti_callback_gpu_op_data::_phase</definition>
+        <argsstring></argsstring>
+        <name>_phase</name>
+        <qualifiedname>pti_callback_gpu_op_data::_phase</qualifiedname>
+        <briefdescription>
+<para>PTI_CB_PHASE_API_ENTER/EXIT. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="133" column="35" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1aef7dbbfa045cec033c69346ed929fa34" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_callback_gpu_op_data::_return_code</definition>
+        <argsstring></argsstring>
+        <name>_return_code</name>
+        <qualifiedname>pti_callback_gpu_op_data::_return_code</qualifiedname>
+        <briefdescription>
+<para>will be valid only for L0 API EXIT, for others will be zero </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="134" column="35" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1a92b65b99ba280068d974365aed34a586" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_callback_gpu_op_data::_correlation_id</definition>
+        <argsstring></argsstring>
+        <name>_correlation_id</name>
+        <qualifiedname>pti_callback_gpu_op_data::_correlation_id</qualifiedname>
+        <briefdescription>
+<para>ID that corresponds to the same call reported by View API records. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="135" column="29" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1a5d1f9a06e7abb87a80a27a9a1aa68771" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_callback_gpu_op_data::_operation_count</definition>
+        <argsstring></argsstring>
+        <name>_operation_count</name>
+        <qualifiedname>pti_callback_gpu_op_data::_operation_count</qualifiedname>
+        <briefdescription>
+<para>number of operations appended or dispatched to the GPU </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="136" column="29" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__callback__gpu__op__data_1adbfb662ac1ae504b802a0d5ce6516c92" prot="public" static="no" mutable="no">
+        <type><ref refid="structpti__gpu__op__details" kindref="compound">pti_gpu_op_details</ref> *</type>
+        <definition>pti_gpu_op_details* pti_callback_gpu_op_data::_operation_details</definition>
+        <argsstring></argsstring>
+        <name>_operation_details</name>
+        <qualifiedname>pti_callback_gpu_op_data::_operation_details</qualifiedname>
+        <briefdescription>
+<para>pointer to details of operation(s) appended, dispatched or completed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="137" column="28" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>pti_callback_gpu_op_data</label>
+        <link refid="structpti__callback__gpu__op__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_operation_details</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pti_gpu_op_details</label>
+        <link refid="structpti__gpu__op__details"/>
+      </node>
+    </collaborationgraph>
+    <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" line="121" column="1" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_callback.h" bodystart="121" bodyend="138"/>
+    <listofallmembers>
+      <member refid="structpti__callback__gpu__op__data_1ad66b57f2a1ad8db4d87ad4331e7f16a4" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_cmd_list_handle</name></member>
+      <member refid="structpti__callback__gpu__op__data_1a9f0e998ccc548658d2f69c775f70ef3d" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_cmd_list_properties</name></member>
+      <member refid="structpti__callback__gpu__op__data_1a92b65b99ba280068d974365aed34a586" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_correlation_id</name></member>
+      <member refid="structpti__callback__gpu__op__data_1ac9200a6d01681fb2242f2789a76e070d" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_device_handle</name></member>
+      <member refid="structpti__callback__gpu__op__data_1ab81a692e4cb5f9dcb430e60c83e6fb24" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_domain</name></member>
+      <member refid="structpti__callback__gpu__op__data_1a5d1f9a06e7abb87a80a27a9a1aa68771" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_operation_count</name></member>
+      <member refid="structpti__callback__gpu__op__data_1adbfb662ac1ae504b802a0d5ce6516c92" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_operation_details</name></member>
+      <member refid="structpti__callback__gpu__op__data_1a21ab0971968117ad759eb3076b2820de" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_phase</name></member>
+      <member refid="structpti__callback__gpu__op__data_1abe609c2ad6cd25689dfa52f9ff021960" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_queue_handle</name></member>
+      <member refid="structpti__callback__gpu__op__data_1aef7dbbfa045cec033c69346ed929fa34" prot="public" virt="non-virtual"><scope>pti_callback_gpu_op_data</scope><name>_return_code</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

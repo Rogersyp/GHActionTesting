@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structpti__view__record__api" kind="struct" language="C++" prot="public">
+    <compoundname>pti_view_record_api</compoundname>
+    <includes refid="pti__view_8h" local="no">pti_view.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpti__view__record__api_1a3d3656d4d38b8539496787c2d84ffe24" prot="public" static="no" mutable="no">
+        <type><ref refid="structpti__view__record__base" kindref="compound">pti_view_record_base</ref></type>
+        <definition>pti_view_record_base pti_view_record_api::_view_kind</definition>
+        <argsstring></argsstring>
+        <name>_view_kind</name>
+        <qualifiedname>pti_view_record_api::_view_kind</qualifiedname>
+        <briefdescription>
+<para>Base record. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="342" column="24" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1a7a7599d5e1900296e13478d9354d0ccc" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_api::_start_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_start_timestamp</name>
+        <qualifiedname>pti_view_record_api::_start_timestamp</qualifiedname>
+        <briefdescription>
+<para>function call start timestamp, ns </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="343" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1ad55b90bee75b76b140471cc94a5a48d4" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_api::_end_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_end_timestamp</name>
+        <qualifiedname>pti_view_record_api::_end_timestamp</qualifiedname>
+        <briefdescription>
+<para>function call end timestamp, ns </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="344" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1a784125eaf51795c6e542fd550f63fc6d" prot="public" static="no" mutable="no">
+        <type><ref refid="pti__view_8h_1aaf49a1e9da25b82c742431aed27067cb" kindref="member">pti_api_group_id</ref></type>
+        <definition>pti_api_group_id pti_view_record_api::_api_group</definition>
+        <argsstring></argsstring>
+        <name>_api_group</name>
+        <qualifiedname>pti_view_record_api::_api_group</qualifiedname>
+        <briefdescription>
+<para>Defines api api_group this record was collected in (L0,Sycl,OCL, etc). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="345" column="20" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1a1225e76fc9a2af696150f05b9e12ba9c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_api::_api_id</definition>
+        <argsstring></argsstring>
+        <name>_api_id</name>
+        <qualifiedname>pti_view_record_api::_api_id</qualifiedname>
+        <briefdescription>
+<para>Id of this api call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="346" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1abbc043f8bbbe6063ec1922d4abf31ddc" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_api::_process_id</definition>
+        <argsstring></argsstring>
+        <name>_process_id</name>
+        <qualifiedname>pti_view_record_api::_process_id</qualifiedname>
+        <briefdescription>
+<para>Process ID of where the api call observed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="347" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1acc7b3de0aea332d23a8d0fef318747e1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_api::_thread_id</definition>
+        <argsstring></argsstring>
+        <name>_thread_id</name>
+        <qualifiedname>pti_view_record_api::_thread_id</qualifiedname>
+        <briefdescription>
+<para>Thread ID of where the api call observed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="348" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1a4906315260c9d157f9dde4edb6fd6246" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_api::_correlation_id</definition>
+        <argsstring></argsstring>
+        <name>_correlation_id</name>
+        <qualifiedname>pti_view_record_api::_correlation_id</qualifiedname>
+        <briefdescription>
+<para>Id correlating this call with other views, eg: memfill, memcpy and kernel gpu activity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="349" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__api_1a58ab030882411fedbca48d81094471bd" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_api::_return_code</definition>
+        <argsstring></argsstring>
+        <name>_return_code</name>
+        <qualifiedname>pti_view_record_api::_return_code</qualifiedname>
+        <briefdescription>
+<para>Applicable only for PTI_VIEW_DRIVER_CALL, type cast to specific driver code type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="350" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>apicalls View record type </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>pti_view_record_api</label>
+        <link refid="structpti__view__record__api"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_view_kind</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pti_view_record_base</label>
+        <link refid="structpti__view__record__base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="341" column="1" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="341" bodyend="351"/>
+    <listofallmembers>
+      <member refid="structpti__view__record__api_1a784125eaf51795c6e542fd550f63fc6d" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_api_group</name></member>
+      <member refid="structpti__view__record__api_1a1225e76fc9a2af696150f05b9e12ba9c" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_api_id</name></member>
+      <member refid="structpti__view__record__api_1a4906315260c9d157f9dde4edb6fd6246" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_correlation_id</name></member>
+      <member refid="structpti__view__record__api_1ad55b90bee75b76b140471cc94a5a48d4" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_end_timestamp</name></member>
+      <member refid="structpti__view__record__api_1abbc043f8bbbe6063ec1922d4abf31ddc" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_process_id</name></member>
+      <member refid="structpti__view__record__api_1a58ab030882411fedbca48d81094471bd" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_return_code</name></member>
+      <member refid="structpti__view__record__api_1a7a7599d5e1900296e13478d9354d0ccc" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_start_timestamp</name></member>
+      <member refid="structpti__view__record__api_1acc7b3de0aea332d23a8d0fef318747e1" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_thread_id</name></member>
+      <member refid="structpti__view__record__api_1a3d3656d4d38b8539496787c2d84ffe24" prot="public" virt="non-virtual"><scope>pti_view_record_api</scope><name>_view_kind</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

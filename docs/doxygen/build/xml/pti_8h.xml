@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="pti_8h" kind="file" language="C++">
+    <compoundname>pti.h</compoundname>
+    <includes local="yes">pti/pti_export.h</includes>
+    <includes local="yes">pti/pti_version.h</includes>
+    <includedby refid="pti__callback_8h" local="yes">pti_callback.h</includedby>
+    <includedby refid="pti__metrics_8h" local="yes">pti_metrics.h</includedby>
+    <includedby refid="pti__metrics__scope_8h" local="yes">pti_metrics_scope.h</includedby>
+    <includedby refid="pti__view_8h" local="yes">pti_view.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>pti.h</label>
+        <link refid="pti_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pti/pti_export.h</label>
+      </node>
+      <node id="3">
+        <label>pti/pti_version.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>pti.h</label>
+        <link refid="pti_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pti_callback.h</label>
+        <link refid="pti__callback_8h"/>
+      </node>
+      <node id="3">
+        <label>pti_metrics.h</label>
+        <link refid="pti__metrics_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pti_metrics_scope.h</label>
+        <link refid="pti__metrics__scope_8h"/>
+      </node>
+      <node id="5">
+        <label>pti_view.h</label>
+        <link refid="pti__view_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="pti_8h_1afc2bf2c0f8c4ffdc6ac5d806dd54b7ab" prot="public" static="no">
+        <name>PTI_MAX_DEVICE_UUID_SIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="19" column="9" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pti_result</name>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa0d9d2f91dae096bc53ad70dab00a91b9" prot="public">
+          <name>PTI_SUCCESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>success </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa62b7cb1fee59566ad346f3437c94b1a" prot="public">
+          <name>PTI_STATUS_END_OF_BUFFER</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>end of buffer reached, e.g., in ptiViewGetNextRecord </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa56effcefccad173b311864ec61840d11" prot="public">
+          <name>PTI_ERROR_NOT_IMPLEMENTED</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>functionality not implemented </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fab56eb6d92221e144c97b339b7de5a568" prot="public">
+          <name>PTI_ERROR_BAD_ARGUMENT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>invalid argument </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa6b1dbe91893162469131b0076da77af8" prot="public">
+          <name>PTI_ERROR_NO_CALLBACKS_SET</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>error due to no callbacks set via ptiViewSetCallbacks </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa658517b1809aff93c4f37888933c43fd" prot="public">
+          <name>PTI_ERROR_EXTERNAL_ID_QUEUE_EMPTY</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>empty external ID-queue while working with PTI_VIEW_EXTERNAL_CORRELATION </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa752b79a9dec6efa432343026288ebfd8" prot="public">
+          <name>PTI_ERROR_BAD_TIMESTAMP</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>error in timestamp conversion, might be related with the user provided TimestampCallback </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fad52429f485c29c4d8a7fc1792ba87493" prot="public">
+          <name>PTI_ERROR_BAD_API_ID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>invalid api_id when enable/disable runtime/driver specific api_id </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa51550d38de179451b95354eae28791b9" prot="public">
+          <name>PTI_ERROR_NO_GPU_VIEWS_ENABLED</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>at least one GPU view must be enabled for kernel tracing </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fadae9c2a62dd4cbd8ad4af1e86bd588da" prot="public">
+          <name>PTI_ERROR_DRIVER</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+<para>unknown driver error </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa109a553a3f481261d508d1b3bdfd041d" prot="public">
+          <name>PTI_ERROR_TRACING_NOT_INITIALIZED</name>
+          <initializer>= 51</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>installed driver requires tracing enabling with setting environment variable ZE_ENABLE_TRACING_LAYER to 1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faf8f3710a514ea236d2f90d549b6d4ac0" prot="public">
+          <name>PTI_ERROR_L0_LOCAL_PROFILING_NOT_SUPPORTED</name>
+          <initializer>= 52</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>no Local profiling support in the installed driver </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa7eae7b242e0f007520955a8b3e99880b" prot="public">
+          <name>PTI_ERROR_METRICS_COLLECTION_NOT_ENABLED</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+<para>metrics collection not running </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fad731d72a5c1f1aad64e54847c1a65da3" prot="public">
+          <name>PTI_ERROR_METRICS_COLLECTION_NOT_DISABLED</name>
+          <initializer>= 101</initializer>
+          <briefdescription>
+<para>metrics collection not stopped </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fafdd07031c4ba0e14027807816e303e8d" prot="public">
+          <name>PTI_ERROR_METRICS_COLLECTION_NOT_PAUSED</name>
+          <initializer>= 102</initializer>
+          <briefdescription>
+<para>metrics collection not paused </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa033dc7a94cec7b29be58c4e24af1b6a7" prot="public">
+          <name>PTI_ERROR_METRICS_COLLECTION_ALREADY_PAUSED</name>
+          <initializer>= 103</initializer>
+          <briefdescription>
+<para>metrics collection already paused </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7facf907aca7af0613cae70ac5953b9599a" prot="public">
+          <name>PTI_ERROR_METRICS_COLLECTION_ALREADY_ENABLED</name>
+          <initializer>= 104</initializer>
+          <briefdescription>
+<para>metrics collection already running </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa8f9572231e95a59454a5946564161901" prot="public">
+          <name>PTI_ERROR_METRICS_BAD_COLLECTION_CONFIGURATION</name>
+          <initializer>= 105</initializer>
+          <briefdescription>
+<para>bad metrics collection configuration </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa1869b458fecaeedb1826d4c4c17cf83" prot="public">
+          <name>PTI_ERROR_METRICS_NO_DATA_COLLECTED</name>
+          <initializer>= 106</initializer>
+          <briefdescription>
+<para>Calculate called on empty collection. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa3e9826a7b001a777812c5f54a42ec820" prot="public">
+          <name>PTI_ERROR_METRICS_SCOPE_METRIC_NOT_FOUND</name>
+          <initializer>= 151</initializer>
+          <briefdescription>
+<para>One or more requested metrics not found across all metrics groups. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa328c401659ca4471505a8dd647d8d41a" prot="public">
+          <name>PTI_ERROR_METRICS_SCOPE_NOT_A_SINGLE_GROUP</name>
+          <initializer>= 152</initializer>
+          <briefdescription>
+<para>When requested metrics cannot be collected within one metrics group. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa831926d41db44125a5fc182837175326" prot="public">
+          <name>PTI_ERROR_METRICS_SCOPE_OUT_OF_MEMORY</name>
+          <initializer>= 153</initializer>
+          <briefdescription>
+<para>Out of memory during metrics scope operation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa24ccdbbd9888780e01156b010ead10b6" prot="public">
+          <name>PTI_ERROR_METRICS_SCOPE_COLLECTION_BUFFER_TOO_SMALL</name>
+          <initializer>= 154</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Size of the buffer is not enough to fit even one Metrics Scope collection </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faddfc948dcc2395c44fdc98c088a4f4f1" prot="public">
+          <name>PTI_ERROR_METRICS_SCOPE_INSUFFICIENT_BUFFER</name>
+          <initializer>= 155</initializer>
+          <briefdescription>
+<para>Insufficient buffer for metrics scope operation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fae2d35093a247036159fd178c4b96c4ed" prot="public">
+          <name>PTI_ERROR_METRICS_SCOPE_INVALID_COLLECTION_BUFFER</name>
+          <initializer>= 156</initializer>
+          <briefdescription>
+<para>Invalid collection buffer in metrics scope. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa15dc7e423c4d5bd4a961e5fd857e7b3" prot="public">
+          <name>PTI_WARN_METRICS_SCOPE_PARTIAL_BUFFER</name>
+          <initializer>= 157</initializer>
+          <briefdescription>
+<para>Warning: partial buffer populated in metrics scope. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa5e7042a7c0edde5c910b05a2af98e4f9" prot="public">
+          <name>PTI_ERROR_INTERNAL</name>
+          <initializer>= 200</initializer>
+          <briefdescription>
+<para>internal error </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Return/Error codes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="24" column="1" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" bodystart="24" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pti_8h_1a22e6a9f524aa0034d2c1a4112dadcfc1" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* pti_device_handle_t</definition>
+        <argsstring></argsstring>
+        <name>pti_device_handle_t</name>
+        <briefdescription>
+<para>Abstraction for backend-specific objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Level Zero is currently the only supported backend. However, these types will attempt to serve other backends. In case the other backend supported - the same types will serve it. Device handle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="80" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pti_8h_1a4250eea6e2cffd20cb11ba60f2875d92" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* pti_backend_ctx_t</definition>
+        <argsstring></argsstring>
+        <name>pti_backend_ctx_t</name>
+        <briefdescription>
+<para>Backend context handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="82" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pti_8h_1a401ee6d5335594044349d949d9b3971b" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* pti_backend_queue_t</definition>
+        <argsstring></argsstring>
+        <name>pti_backend_queue_t</name>
+        <briefdescription>
+<para>Backend queue handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="84" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pti_8h_1a32a13ea55002b9ae4b265a30cea30962" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* pti_backend_evt_t</definition>
+        <argsstring></argsstring>
+        <name>pti_backend_evt_t</name>
+        <briefdescription>
+<para>Backend event handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="86" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pti_8h_1ab9bd59bbeb3f837807f7ab97888b03e8" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* pti_backend_command_list_t</definition>
+        <argsstring></argsstring>
+        <name>pti_backend_command_list_t</name>
+        <briefdescription>
+<para>Backend command list handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="88" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="pti_8h_1af719880cfe03dc1d273c833cf12949e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * ptiResultTypeToString</definition>
+        <argsstring>(pti_result result_value)</argsstring>
+        <name>ptiResultTypeToString</name>
+        <param>
+          <type><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7f" kindref="member">pti_result</ref></type>
+          <declname>result_value</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to return stringified enum members for pti_result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const char* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" line="70" column="13" declfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h" declline="70" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//==============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>Intel<sp/>Corporation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>MIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=============================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDE_PTI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_PTI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pti/pti_export.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pti/pti_version.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>clang-format<sp/>off<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@brief<sp/>Maximum<sp/>device<sp/>UUID<sp/>size<sp/>in<sp/>bytes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="pti_8h_1afc2bf2c0f8c4ffdc6ac5d806dd54b7ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PTI_MAX_DEVICE_UUID_SIZE<sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa0d9d2f91dae096bc53ad70dab00a91b9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa0d9d2f91dae096bc53ad70dab00a91b9" kindref="member">PTI_SUCCESS</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa62b7cb1fee59566ad346f3437c94b1a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa62b7cb1fee59566ad346f3437c94b1a" kindref="member">PTI_STATUS_END_OF_BUFFER</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa56effcefccad173b311864ec61840d11" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa56effcefccad173b311864ec61840d11" kindref="member">PTI_ERROR_NOT_IMPLEMENTED</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fab56eb6d92221e144c97b339b7de5a568" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fab56eb6d92221e144c97b339b7de5a568" kindref="member">PTI_ERROR_BAD_ARGUMENT</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa6b1dbe91893162469131b0076da77af8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa6b1dbe91893162469131b0076da77af8" kindref="member">PTI_ERROR_NO_CALLBACKS_SET</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa658517b1809aff93c4f37888933c43fd" kindref="member">PTI_ERROR_EXTERNAL_ID_QUEUE_EMPTY</ref><sp/>=<sp/>5,<sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa752b79a9dec6efa432343026288ebfd8" kindref="member">PTI_ERROR_BAD_TIMESTAMP</ref><sp/>=<sp/>6,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fad52429f485c29c4d8a7fc1792ba87493" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fad52429f485c29c4d8a7fc1792ba87493" kindref="member">PTI_ERROR_BAD_API_ID</ref><sp/>=<sp/>7,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa51550d38de179451b95354eae28791b9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa51550d38de179451b95354eae28791b9" kindref="member">PTI_ERROR_NO_GPU_VIEWS_ENABLED</ref><sp/>=<sp/>8,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fadae9c2a62dd4cbd8ad4af1e86bd588da" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fadae9c2a62dd4cbd8ad4af1e86bd588da" kindref="member">PTI_ERROR_DRIVER</ref><sp/>=<sp/>50,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa109a553a3f481261d508d1b3bdfd041d" kindref="member">PTI_ERROR_TRACING_NOT_INITIALIZED</ref><sp/>=<sp/>51,<sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faf8f3710a514ea236d2f90d549b6d4ac0" kindref="member">PTI_ERROR_L0_LOCAL_PROFILING_NOT_SUPPORTED</ref><sp/>=<sp/>52,<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa7eae7b242e0f007520955a8b3e99880b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa7eae7b242e0f007520955a8b3e99880b" kindref="member">PTI_ERROR_METRICS_COLLECTION_NOT_ENABLED</ref><sp/>=<sp/>100,<sp/></highlight></codeline>
+<codeline lineno="45" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fad731d72a5c1f1aad64e54847c1a65da3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fad731d72a5c1f1aad64e54847c1a65da3" kindref="member">PTI_ERROR_METRICS_COLLECTION_NOT_DISABLED</ref><sp/>=<sp/>101,<sp/></highlight></codeline>
+<codeline lineno="46" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fafdd07031c4ba0e14027807816e303e8d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fafdd07031c4ba0e14027807816e303e8d" kindref="member">PTI_ERROR_METRICS_COLLECTION_NOT_PAUSED</ref><sp/>=<sp/>102,<sp/></highlight></codeline>
+<codeline lineno="47" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa033dc7a94cec7b29be58c4e24af1b6a7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa033dc7a94cec7b29be58c4e24af1b6a7" kindref="member">PTI_ERROR_METRICS_COLLECTION_ALREADY_PAUSED</ref><sp/>=<sp/>103,<sp/></highlight></codeline>
+<codeline lineno="48" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7facf907aca7af0613cae70ac5953b9599a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7facf907aca7af0613cae70ac5953b9599a" kindref="member">PTI_ERROR_METRICS_COLLECTION_ALREADY_ENABLED</ref><sp/>=<sp/>104,<sp/></highlight></codeline>
+<codeline lineno="49" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa8f9572231e95a59454a5946564161901" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa8f9572231e95a59454a5946564161901" kindref="member">PTI_ERROR_METRICS_BAD_COLLECTION_CONFIGURATION</ref><sp/>=<sp/>105,<sp/></highlight></codeline>
+<codeline lineno="50" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa1869b458fecaeedb1826d4c4c17cf83" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa1869b458fecaeedb1826d4c4c17cf83" kindref="member">PTI_ERROR_METRICS_NO_DATA_COLLECTED</ref><sp/>=<sp/>106,<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa3e9826a7b001a777812c5f54a42ec820" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa3e9826a7b001a777812c5f54a42ec820" kindref="member">PTI_ERROR_METRICS_SCOPE_METRIC_NOT_FOUND</ref><sp/>=<sp/>151,<sp/></highlight></codeline>
+<codeline lineno="53" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa328c401659ca4471505a8dd647d8d41a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa328c401659ca4471505a8dd647d8d41a" kindref="member">PTI_ERROR_METRICS_SCOPE_NOT_A_SINGLE_GROUP</ref><sp/>=<sp/>152,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa831926d41db44125a5fc182837175326" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa831926d41db44125a5fc182837175326" kindref="member">PTI_ERROR_METRICS_SCOPE_OUT_OF_MEMORY</ref><sp/>=<sp/>153,<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa24ccdbbd9888780e01156b010ead10b6" kindref="member">PTI_ERROR_METRICS_SCOPE_COLLECTION_BUFFER_TOO_SMALL</ref><sp/>=<sp/>154,<sp/></highlight></codeline>
+<codeline lineno="58" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faddfc948dcc2395c44fdc98c088a4f4f1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faddfc948dcc2395c44fdc98c088a4f4f1" kindref="member">PTI_ERROR_METRICS_SCOPE_INSUFFICIENT_BUFFER</ref><sp/>=<sp/>155,<sp/></highlight></codeline>
+<codeline lineno="59" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fae2d35093a247036159fd178c4b96c4ed" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fae2d35093a247036159fd178c4b96c4ed" kindref="member">PTI_ERROR_METRICS_SCOPE_INVALID_COLLECTION_BUFFER</ref><sp/>=<sp/>156,<sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa15dc7e423c4d5bd4a961e5fd857e7b3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7faa15dc7e423c4d5bd4a961e5fd857e7b3" kindref="member">PTI_WARN_METRICS_SCOPE_PARTIAL_BUFFER</ref><sp/>=<sp/>157,<sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa5e7042a7c0edde5c910b05a2af98e4f9" kindref="member">PTI_ERROR_INTERNAL</ref><sp/>=<sp/>200<sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7fa5e7042a7c0edde5c910b05a2af98e4f9" refkind="member"><highlight class="normal">}<sp/><ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7f" kindref="member">pti_result</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="pti_8h_1af719880cfe03dc1d273c833cf12949e3" refkind="member"><highlight class="normal">PTI_EXPORT<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="pti_8h_1af719880cfe03dc1d273c833cf12949e3" kindref="member">ptiResultTypeToString</ref>(<ref refid="pti_8h_1a2c036fe2f436bc99ab27e48f21fffd7f" kindref="member">pti_result</ref><sp/>result_value);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="pti_8h_1a22e6a9f524aa0034d2c1a4112dadcfc1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pti_8h_1a22e6a9f524aa0034d2c1a4112dadcfc1" kindref="member">pti_device_handle_t</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="pti_8h_1a4250eea6e2cffd20cb11ba60f2875d92" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pti_8h_1a4250eea6e2cffd20cb11ba60f2875d92" kindref="member">pti_backend_ctx_t</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="pti_8h_1a401ee6d5335594044349d949d9b3971b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pti_8h_1a401ee6d5335594044349d949d9b3971b" kindref="member">pti_backend_queue_t</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="pti_8h_1a32a13ea55002b9ae4b265a30cea30962" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pti_8h_1a32a13ea55002b9ae4b265a30cea30962" kindref="member">pti_backend_evt_t</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="pti_8h_1ab9bd59bbeb3f837807f7ab97888b03e8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pti_8h_1ab9bd59bbeb3f837807f7ab97888b03e8" kindref="member">pti_backend_command_list_t</ref>;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_PTI_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti.h"/>
+  </compounddef>
+</doxygen>

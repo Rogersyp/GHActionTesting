@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structpti__view__record__kernel" kind="struct" language="C++" prot="public">
+    <compoundname>pti_view_record_kernel</compoundname>
+    <includes refid="pti__view_8h" local="no">pti_view.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a9c732e812bb95ae4317242e8faac6208" prot="public" static="no" mutable="no">
+        <type><ref refid="structpti__view__record__base" kindref="compound">pti_view_record_base</ref></type>
+        <definition>pti_view_record_base pti_view_record_kernel::_view_kind</definition>
+        <argsstring></argsstring>
+        <name>_view_kind</name>
+        <qualifiedname>pti_view_record_kernel::_view_kind</qualifiedname>
+        <briefdescription>
+<para>Base record. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="171" column="24" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a72ec84abb7ab438e02234478cd18352c" prot="public" static="no" mutable="no">
+        <type><ref refid="pti_8h_1a401ee6d5335594044349d949d9b3971b" kindref="member">pti_backend_queue_t</ref></type>
+        <definition>pti_backend_queue_t pti_view_record_kernel::_queue_handle</definition>
+        <argsstring></argsstring>
+        <name>_queue_handle</name>
+        <qualifiedname>pti_view_record_kernel::_queue_handle</qualifiedname>
+        <briefdescription>
+<para>Device back-end queue handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="172" column="23" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a5a79d3ee3f9c54749f94780f9105fbf5" prot="public" static="no" mutable="no">
+        <type><ref refid="pti_8h_1a4250eea6e2cffd20cb11ba60f2875d92" kindref="member">pti_backend_ctx_t</ref></type>
+        <definition>pti_backend_ctx_t pti_view_record_kernel::_context_handle</definition>
+        <argsstring></argsstring>
+        <name>_context_handle</name>
+        <qualifiedname>pti_view_record_kernel::_context_handle</qualifiedname>
+        <briefdescription>
+<para>Context handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="173" column="21" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a6cd70c1385b34c67a5b699673e60a662" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* pti_view_record_kernel::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <qualifiedname>pti_view_record_kernel::_name</qualifiedname>
+        <briefdescription>
+<para>Kernel name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="174" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1aa36cec1918b19a24d9d608028263cebc" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* pti_view_record_kernel::_source_file_name</definition>
+        <argsstring></argsstring>
+        <name>_source_file_name</name>
+        <qualifiedname>pti_view_record_kernel::_source_file_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Kernel source file, null if no information </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="175" column="14" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a67c19886b47d25e370aef75238e08e14" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_source_line_number</definition>
+        <argsstring></argsstring>
+        <name>_source_line_number</name>
+        <qualifiedname>pti_view_record_kernel::_source_line_number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Kernel beginning source line number, 0 if no information </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="177" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a4de9e17d928ac8719cac29ee503488df" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_kernel_id</definition>
+        <argsstring></argsstring>
+        <name>_kernel_id</name>
+        <qualifiedname>pti_view_record_kernel::_kernel_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Kernel instance ID, unique among all device kernel instances </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="179" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1ab30d9fcfeecf3c611c6d81aa9cfbdd73" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_kernel::_correlation_id</definition>
+        <argsstring></argsstring>
+        <name>_correlation_id</name>
+        <qualifiedname>pti_view_record_kernel::_correlation_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ID that correlates this record with records of other Views </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="181" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a318bcee5848916db5effb18708f8cf9d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_kernel::_thread_id</definition>
+        <argsstring></argsstring>
+        <name>_thread_id</name>
+        <qualifiedname>pti_view_record_kernel::_thread_id</qualifiedname>
+        <briefdescription>
+<para>Thread ID of Function call. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="183" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a4fc5d60ed37b3eae9313f2fde08c262c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char pti_view_record_kernel::_pci_address[PTI_MAX_PCI_ADDRESS_SIZE]</definition>
+        <argsstring>[PTI_MAX_PCI_ADDRESS_SIZE]</argsstring>
+        <name>_pci_address</name>
+        <qualifiedname>pti_view_record_kernel::_pci_address</qualifiedname>
+        <briefdescription>
+<para>Device pci_address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="184" column="8" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1abb6c7fa4dbad358f887237cdeeb5ec12" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pti_view_record_kernel::_device_uuid[PTI_MAX_DEVICE_UUID_SIZE]</definition>
+        <argsstring>[PTI_MAX_DEVICE_UUID_SIZE]</argsstring>
+        <name>_device_uuid</name>
+        <qualifiedname>pti_view_record_kernel::_device_uuid</qualifiedname>
+        <briefdescription>
+<para>Device uuid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="185" column="11" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a60900731eda40ddfa20a4aac3ecf0677" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_append_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_append_timestamp</name>
+        <qualifiedname>pti_view_record_kernel::_append_timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timestamp of kernel appending to back-end command list, ns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="186" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a35d5457111bd0f724e17a36b0c93690a" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_start_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_start_timestamp</name>
+        <qualifiedname>pti_view_record_kernel::_start_timestamp</qualifiedname>
+        <briefdescription>
+<para>Timestamp of kernel start on device, ns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="188" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a70e8f9456ff27fd1c179084939c4c72d" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_end_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_end_timestamp</name>
+        <qualifiedname>pti_view_record_kernel::_end_timestamp</qualifiedname>
+        <briefdescription>
+<para>Timestamp of kernel completion on device, ns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="189" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a207732a009efa83627ca31cdc2396242" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_submit_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_submit_timestamp</name>
+        <qualifiedname>pti_view_record_kernel::_submit_timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timestamp of kernel command list submission of device, ns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="190" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a94c83aaf700f8f6975e17a711cab71ec" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_sycl_task_begin_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_sycl_task_begin_timestamp</name>
+        <qualifiedname>pti_view_record_kernel::_sycl_task_begin_timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timestamp of kernel submission from SYCL layer, ns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="192" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a3bd4dccdf3e5d54ab5bd6f2240e6c1b0" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_sycl_enqk_begin_timestamp</definition>
+        <argsstring></argsstring>
+        <name>_sycl_enqk_begin_timestamp</name>
+        <qualifiedname>pti_view_record_kernel::_sycl_enqk_begin_timestamp</qualifiedname>
+        <briefdescription>
+<para>Timestamp of enqueue kernel from SYCL layer, ns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="194" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1aebac0c8dfb876534c58c64575ebb4dd4" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_sycl_node_id</definition>
+        <argsstring></argsstring>
+        <name>_sycl_node_id</name>
+        <qualifiedname>pti_view_record_kernel::_sycl_node_id</qualifiedname>
+        <briefdescription>
+<para>SYCL Node ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="195" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a8a26e1db153493dd4abddcdf67ca56ae" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pti_view_record_kernel::_sycl_queue_id</definition>
+        <argsstring></argsstring>
+        <name>_sycl_queue_id</name>
+        <qualifiedname>pti_view_record_kernel::_sycl_queue_id</qualifiedname>
+        <briefdescription>
+<para>Device front-end queue id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="196" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpti__view__record__kernel_1a842759480a7c9ee5e9ec7c67068e7d98" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pti_view_record_kernel::_sycl_invocation_id</definition>
+        <argsstring></argsstring>
+        <name>_sycl_invocation_id</name>
+        <qualifiedname>pti_view_record_kernel::_sycl_invocation_id</qualifiedname>
+        <briefdescription>
+<para>SYCL Invocation ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="197" column="12" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Device Compute kernel View record type. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>about the timestamps in the all records below: in case PTI collection was not able to determine the timestamp for a particular event in the life of a kernel, data transfer, a call, etc., the timestamp value will be zero </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>pti_view_record_base</label>
+        <link refid="structpti__view__record__base"/>
+      </node>
+      <node id="1">
+        <label>pti_view_record_kernel</label>
+        <link refid="structpti__view__record__kernel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_view_kind</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" line="170" column="1" bodyfile="/localdisk/yipengso/pti_latest/sdk/include/pti/pti_view.h" bodystart="170" bodyend="198"/>
+    <listofallmembers>
+      <member refid="structpti__view__record__kernel_1a60900731eda40ddfa20a4aac3ecf0677" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_append_timestamp</name></member>
+      <member refid="structpti__view__record__kernel_1a5a79d3ee3f9c54749f94780f9105fbf5" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_context_handle</name></member>
+      <member refid="structpti__view__record__kernel_1ab30d9fcfeecf3c611c6d81aa9cfbdd73" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_correlation_id</name></member>
+      <member refid="structpti__view__record__kernel_1abb6c7fa4dbad358f887237cdeeb5ec12" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_device_uuid</name></member>
+      <member refid="structpti__view__record__kernel_1a70e8f9456ff27fd1c179084939c4c72d" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_end_timestamp</name></member>
+      <member refid="structpti__view__record__kernel_1a4de9e17d928ac8719cac29ee503488df" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_kernel_id</name></member>
+      <member refid="structpti__view__record__kernel_1a6cd70c1385b34c67a5b699673e60a662" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_name</name></member>
+      <member refid="structpti__view__record__kernel_1a4fc5d60ed37b3eae9313f2fde08c262c" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_pci_address</name></member>
+      <member refid="structpti__view__record__kernel_1a72ec84abb7ab438e02234478cd18352c" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_queue_handle</name></member>
+      <member refid="structpti__view__record__kernel_1aa36cec1918b19a24d9d608028263cebc" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_source_file_name</name></member>
+      <member refid="structpti__view__record__kernel_1a67c19886b47d25e370aef75238e08e14" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_source_line_number</name></member>
+      <member refid="structpti__view__record__kernel_1a35d5457111bd0f724e17a36b0c93690a" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_start_timestamp</name></member>
+      <member refid="structpti__view__record__kernel_1a207732a009efa83627ca31cdc2396242" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_submit_timestamp</name></member>
+      <member refid="structpti__view__record__kernel_1a3bd4dccdf3e5d54ab5bd6f2240e6c1b0" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_sycl_enqk_begin_timestamp</name></member>
+      <member refid="structpti__view__record__kernel_1a842759480a7c9ee5e9ec7c67068e7d98" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_sycl_invocation_id</name></member>
+      <member refid="structpti__view__record__kernel_1aebac0c8dfb876534c58c64575ebb4dd4" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_sycl_node_id</name></member>
+      <member refid="structpti__view__record__kernel_1a8a26e1db153493dd4abddcdf67ca56ae" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_sycl_queue_id</name></member>
+      <member refid="structpti__view__record__kernel_1a94c83aaf700f8f6975e17a711cab71ec" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_sycl_task_begin_timestamp</name></member>
+      <member refid="structpti__view__record__kernel_1a318bcee5848916db5effb18708f8cf9d" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_thread_id</name></member>
+      <member refid="structpti__view__record__kernel_1a9c732e812bb95ae4317242e8faac6208" prot="public" virt="non-virtual"><scope>pti_view_record_kernel</scope><name>_view_kind</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
